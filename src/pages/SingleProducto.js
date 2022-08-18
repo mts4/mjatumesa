@@ -1,4 +1,4 @@
-import SingleProductoTemplate from '../templates/Productos/SingleProducto'
+import SingleProductoTemplate from '../components/templates/Productos/SingleProducto'
 
 const SingleProductoPage = () => {
   return <SingleProductoTemplate />

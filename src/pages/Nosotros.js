@@ -1,4 +1,4 @@
-import NosotrosTemplate from '../templates/Nosotros'
+import NosotrosTemplate from '../components/templates/Nosotros'
 
 const NosotrosPage = () => {
   return <NosotrosTemplate />
