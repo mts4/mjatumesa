@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 // Routes
 import RoutesNav from './routes/routes'
 // Global Styles
-import './theme/css/reset.css'
+import './theme/css/lib/reset.css'
 
 const App = () => {
   return (

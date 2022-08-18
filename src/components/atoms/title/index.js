@@ -1,8 +1,8 @@
 import Text from './styles'
 
-const Title = ({ title, fontSize = 20 }) => {
+const Title = ({ title, fontSize = 20, color }) => {
   return (
-    <Text fontSize={fontSize} color='red'>
+    <Text fontSize={fontSize} color={color}>
       {title}
     </Text>
   )
