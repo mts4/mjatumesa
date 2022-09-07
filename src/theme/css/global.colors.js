@@ -3,7 +3,7 @@ export const COLORS = {
   white: '#FFF',
   turqoiseDark: '#313151',
   salmon: '#EB6D60',
-  violetDark: '#252C5A',
+  violetDark: '#262C57',
   beige: '#EFE7CE',
   gris: '#C2C2CE',
 }

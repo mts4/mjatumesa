@@ -10,7 +10,7 @@ const HomeTemplate = () => {
     <>
       <MetaTags title='Home' description='descripcion home' />
       <Navbar />
-      <Title title='hola desde home' fontSize={20} color={COLORS.black} />
+      <Title title='hola desde home' fontSize={20} color={COLORS.salmon} />
     </>
   )
 }

@@ -1,18 +1,17 @@
+import Icon from '../../components/atoms/icon'
+import { COLORS } from '../../theme/css/global.colors'
+
 export const URL_NAV = [
   {
-    name: 'Inicio',
+    name: 'Servicios',
     url: '',
+    icon: <Icon name='star' width={15} height={14} color={COLORS.violetDark} />,
   },
   {
-    name: 'Sobre Nosotros',
-    url: 'nosotros',
-  },
-  {
-    name: 'Productos',
-    url: 'productos',
-  },
-  {
-    name: 'Quichen',
-    url: 'productos/quichen',
+    name: 'Somos lo que comemos',
+    url: '',
+    icon: (
+      <Icon name='hearth' width={13} height={11} color={COLORS.violetDark} />
+    ),
   },
 ]
