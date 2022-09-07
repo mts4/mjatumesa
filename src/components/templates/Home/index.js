@@ -1,16 +1,14 @@
 import Navbar from '../../organisms/menu'
 import MetaTags from '../../organisms/metas'
-// Atoms
-import Title from '../../atoms/title'
-// Utils
-import { COLORS } from '../../../theme/css/global.colors'
+// Organismn
+import TopSection from '../../organisms/home/TopSection'
 
 const HomeTemplate = () => {
   return (
     <>
-      <MetaTags title='Home' description='descripcion home' />
+      <MetaTags title='Cheffify - Home' description='descripcion home' />
       <Navbar />
-      <Title title='hola desde home' fontSize={20} color={COLORS.salmon} />
+      <TopSection />
     </>
   )
 }
