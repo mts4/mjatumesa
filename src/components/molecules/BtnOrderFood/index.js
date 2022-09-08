@@ -1,11 +1,11 @@
-import Icon from '../../atoms/icon'
+import Icon from 'cheffify-react-icons'
 // Styles
 import Button from './styles'
 
-const BtnOrderFood = ({ text, icon, iconColor, bgColor }) => {
+const BtnOrderFood = ({ text, bgColor, icon, iconColor, sizeIcon }) => {
   return (
     <Button bgColor={bgColor}>
-      <Icon name={icon} width={15} height={11} color={iconColor} />
+      <Icon name={icon} size={sizeIcon} color={iconColor} />
       <p className='text'>{text}</p>
     </Button>
   )

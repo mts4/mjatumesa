@@ -30,7 +30,10 @@ const Wrapper = styled.div`
         color: ${COLORS.salmon};
       }
       .icon {
-        margin-top: 2px;
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        margin-left: 20px;
       }
     }
   }

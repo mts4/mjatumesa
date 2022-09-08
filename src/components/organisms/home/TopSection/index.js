@@ -1,5 +1,6 @@
 import Button from '../../../molecules/Button'
-import Icon from '../../../atoms/icon'
+// Images
+import EmoteLove from '../../../../assets/images/svg/icons/emote-love.svg'
 // Utils
 import { COLORS } from '../../../../theme/css/global.colors'
 // Styles
@@ -17,12 +18,7 @@ const TopSection = () => {
           <strong className='important'>sin aditivos ni conservantes</strong>.
           Recibe nuestra comida directamente en tu casa.{' '}
           <strong>¡Garantía de calidad!</strong>
-          <Icon
-            name='emoteLove'
-            width={21}
-            height={21}
-            style={{ marginLeft: 20, position: 'absolute' }}
-          />
+          <img src={EmoteLove} alt='Icono emote Love' className='icon' />
         </p>
         <div className='blockLeft__buttons'>
           <Button

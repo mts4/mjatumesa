@@ -1,14 +1,21 @@
-import Icon from '../../atoms/icon'
+import Icon from 'cheffify-react-icons'
 // Styles
 import Button from './styles'
 
-const BtnAccount = ({ text, iconLeft, iconRight, bgColor }) => {
+const BtnAccount = ({
+  text,
+  bgColor,
+  iconLeft,
+  iconRight,
+  iconColor,
+  sizeIcon,
+}) => {
   return (
     <Button bgColor={bgColor}>
-      <Icon name={iconLeft} width={11} height={16} />
+      <Icon name={iconLeft} size={sizeIcon} color={iconColor} />
       <p className='text'>{text}</p>
       <div className='separator' />
-      <Icon name={iconRight} width={17} height={12} />
+      <Icon name={iconRight} size={sizeIcon} color={iconColor} />
     </Button>
   )
 }

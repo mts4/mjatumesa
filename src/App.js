@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 // Routes
 import RoutesNav from './routes/routes'
 // Global Styles
+import 'cheffify-react-icons/dist/index.css'
 import './theme/css/lib/reset.css'
 
 const App = () => {

@@ -1,4 +1,6 @@
 import BtnOrderFood from '../../molecules/BtnOrderFood'
+// Icons
+import Icon from 'cheffify-react-icons'
 // Utils
 import { URL_NAV } from '../../../utils/const/menuNav'
 import { COLORS } from '../../../theme/css/global.colors'
@@ -24,7 +26,11 @@ const Navbar = () => {
         <div className='menu__links'>
           {URL_NAV.map((item, index) => (
             <span className='menu__links-contain' key={index}>
-              {item.icon}
+              <Icon
+                name={item.icon.name}
+                size={item.icon.size}
+                color={COLORS.violetDark}
+              />
               <p className='menu__links-contain--txt'>{item.name}</p>
             </span>
           ))}
@@ -32,15 +38,18 @@ const Navbar = () => {
         <div className='menu__btns'>
           <BtnOrderFood
             text='Pedir comida'
+            bgColor={COLORS.salmon}
             icon='bell'
             iconColor={COLORS.white}
-            bgColor={COLORS.salmon}
+            sizeIcon={13}
           />
           <BtnAccount
             text='Mi cuenta'
+            bgColor={COLORS.violetDark}
             iconLeft='account'
             iconRight='cart'
-            bgColor={COLORS.violetDark}
+            iconColor={COLORS.white}
+            sizeIcon={13}
           />
         </div>
       </div>
