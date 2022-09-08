@@ -1,6 +1,7 @@
 import Button from '../../../molecules/Button'
 // Images
 import EmoteLove from '../../../../assets/images/svg/icons/emote-love.svg'
+import TopSectionImage from '../../../../assets/images/svg/img/top-section-image.svg'
 // Utils
 import { COLORS } from '../../../../theme/css/global.colors'
 // Styles
@@ -39,6 +40,13 @@ const TopSection = () => {
             customStyle={{ marginLeft: 15 }}
           />
         </div>
+      </div>
+      <div className='blockRight'>
+        <img
+          src={TopSectionImage}
+          alt='Image top Section'
+          className='blockRight__image'
+        />
       </div>
     </Wrapper>
   )

@@ -5,12 +5,15 @@ import { COLORS } from '../../../../theme/css/global.colors'
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  max-width: 620px;
   background-color: ${COLORS.white};
-  padding-left: 193px;
+  justify-content: space-between;
   .blockLeft {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 620px;
+    padding-left: 193px;
+    padding-top: 120px;
     &__title {
       width: 100%;
       max-width: 280px;
@@ -24,8 +27,8 @@ const Wrapper = styled.div`
     &__description {
       color: ${COLORS.violetDark};
       font-size: 19px;
-      line-height: 25px;
-      margin-bottom: 60px;
+      line-height: 35px;
+      margin-bottom: 80px;
       strong.important {
         color: ${COLORS.salmon};
       }
@@ -35,6 +38,19 @@ const Wrapper = styled.div`
         height: 21px;
         margin-left: 20px;
       }
+    }
+  }
+  .blockRight {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    &__image {
+      position: relative;
+      display: block;
+      margin-left: auto;
+      max-width: 850px;
+      width: 100%;
     }
   }
 `
