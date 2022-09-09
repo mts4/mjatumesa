@@ -13,7 +13,7 @@ const ButtonPrimary = styled.button`
   border: 2px solid
     ${props => (props.borderColor ? props.borderColor : COLORS.salmon)};
   background-color: ${props => (props.bgColor ? props.bgColor : COLORS.salmon)};
-  font-weight: 600;
+  font-weight: 700;
   font-family: 'Raleway';
   text-align: center;
   transition: filter ease-in-out 0.5s;

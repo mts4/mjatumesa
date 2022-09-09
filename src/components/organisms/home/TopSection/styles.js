@@ -20,6 +20,7 @@ const Wrapper = styled.div`
       color: ${COLORS.violetDark};
       margin-bottom: 25px;
       font-size: 42px;
+      font-weight: 800;
       span {
         color: ${COLORS.salmon};
       }
@@ -29,9 +30,13 @@ const Wrapper = styled.div`
       font-size: 19px;
       line-height: 35px;
       margin-bottom: 80px;
+      strong {
+        font-weight: 600;
+      }
       strong.important {
         color: ${COLORS.salmon};
       }
+
       .icon {
         position: absolute;
         width: 21px;
@@ -49,6 +54,7 @@ const Wrapper = styled.div`
       position: relative;
       display: block;
       margin-left: auto;
+      margin-bottom: auto;
       max-width: 850px;
       width: 100%;
     }
