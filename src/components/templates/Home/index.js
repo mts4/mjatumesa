@@ -1,8 +1,8 @@
 import Navbar from '../../organisms/menu'
 import MetaTags from '../../organisms/metas'
-// Organismn
 import TopSection from '../../organisms/home/TopSection'
 import SecondSection from '../../organisms/home/SecondSection'
+import ThirdSection from '../../organisms/home/ThirdSection'
 
 const HomeTemplate = () => {
   return (
@@ -11,6 +11,7 @@ const HomeTemplate = () => {
       <Navbar />
       <TopSection />
       <SecondSection />
+      <ThirdSection />
     </>
   )
 }

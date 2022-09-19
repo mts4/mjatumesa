@@ -8,22 +8,12 @@ const Arrow = styled.div`
   justify-content: center;
   align-items: center;
   top: -50px;
-  background-color: ${COLORS.salmonLight};
+  background-color: ${props =>
+    props.bgColor ? props.bgColor : COLORS.salmonLight};
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  /* &::before {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 40px;
-    height: 20px;
-    left: -15px;
-    top: 20px;
-    background: linear-gradient(to left, #ff0000 50%, #fff 50%);
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-  } */
+  cursor: pointer;
   .icon {
     width: 30px;
     height: 30px;

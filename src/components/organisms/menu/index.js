@@ -2,7 +2,7 @@ import BtnOrderFood from '../../molecules/BtnOrderFood'
 // Icons
 import Icon from 'cheffify-react-icons'
 // Utils
-import { URL_NAV } from '../../../utils/const/menuNav'
+import { URL_NAV } from '../../../utils/const'
 import { COLORS } from '../../../theme/css/global.colors'
 // Svg
 import Logo from '../../../assets/images/svg/logos/cheffify.svg'

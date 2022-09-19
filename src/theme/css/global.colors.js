@@ -7,4 +7,7 @@ export const COLORS = {
   violetDark: '#262C57',
   beige: '#EFE7CE',
   gris: '#C2C2CE',
+  grey: '#80808B',
+  lightGray: '#EDEDED',
+  violetLight: '#646477',
 }
