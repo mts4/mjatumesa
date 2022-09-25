@@ -2,6 +2,8 @@ import ArrowScrollDown from '../../../molecules/ArrowScrollDown'
 import TitleSection from '../../../molecules/TitleSection'
 import Button from '../../../molecules/Button'
 import ButtonCircleDown from '../../../molecules/ButtonCircleDown'
+// Svg
+import IconStore from '../../../../assets/images/svg/icons/icon-store.svg'
 // Utils
 import { LIST_INFO } from '../../../../utils/const'
 import { COLORS } from '../../../../theme/css/global.colors'
@@ -25,9 +27,11 @@ const ThirdSection = () => {
         ))}
       </ItemsBox>
       <Button
+        icon={<IconStore />}
         text='Visitar tienda'
         bgColor={COLORS.white}
         color={COLORS.salmon}
+        iconSize={27}
       />
       <ButtonCircleDown customStyle={{ marginTop: 40 }} />
     </Wrapper>
