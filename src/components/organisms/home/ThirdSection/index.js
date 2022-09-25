@@ -4,6 +4,9 @@ import Button from '../../../molecules/Button'
 import ButtonCircleDown from '../../../molecules/ButtonCircleDown'
 // Svg
 import IconStore from '../../../../assets/images/svg/icons/icon-store.svg'
+import bgLeft from '../../../../assets/images/svg/img/bg-third-left.svg'
+import bgRight from '../../../../assets/images/svg/img/bg-third-right.svg'
+
 // Utils
 import { LIST_INFO } from '../../../../utils/const'
 import { COLORS } from '../../../../theme/css/global.colors'
@@ -13,7 +16,7 @@ import Wrapper, { ItemsBox, Item } from './styles'
 const ThirdSection = () => {
   return (
     <Wrapper>
-      <ArrowScrollDown bgColor={COLORS.white} />
+      <ArrowScrollDown bgColor={COLORS.white} color={COLORS.salmon} />
       <TitleSection
         textFirst='Pensamos por ti. '
         textSecond='Resolvemos por ti.'
@@ -27,13 +30,15 @@ const ThirdSection = () => {
         ))}
       </ItemsBox>
       <Button
-        icon={<IconStore />}
+        iconLeft={<IconStore />}
         text='Visitar tienda'
         bgColor={COLORS.white}
         color={COLORS.salmon}
-        iconSize={27}
+        iconLeftSize={27}
       />
       <ButtonCircleDown customStyle={{ marginTop: 40 }} />
+      <img src={bgLeft} className='bgLeft' />
+      <img src={bgRight} className='bgRight' />
     </Wrapper>
   )
 }

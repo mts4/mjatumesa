@@ -8,8 +8,8 @@ const Button = ({
   width,
   customStyle,
   borderColor,
-  icon,
-  iconSize,
+  iconLeft,
+  iconLeftSize,
 }) => {
   return (
     <ButtonPrimary
@@ -18,11 +18,11 @@ const Button = ({
       bgColor={bgColor}
       borderColor={borderColor}
       width={width}
-      icon={icon}
-      iconSize={iconSize}
+      iconLeft={iconLeft}
+      iconLeftSize={iconLeftSize}
       style={customStyle}
     >
-      {icon && <img src={icon.type} />}
+      {iconLeft && <img src={iconLeft.type} />}
       {text}
     </ButtonPrimary>
   )

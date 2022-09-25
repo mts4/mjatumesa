@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { COLORS } from '../../../theme/css/global.colors'
 
 const ButtonPrimary = styled.button`
-  display: ${props => props.icon && `flex`};
-  justify-content: ${props => props.icon && `center`};
-  align-items: ${props => props.icon && `center`};
+  display: ${props => props.iconLeft && `flex`};
+  justify-content: ${props => props.iconLeft && `center`};
+  align-items: ${props => props.iconLeft && `center`};
   cursor: pointer;
   width: 100%;
   max-width: ${props => (props.width ? `${props.width}px` : '250px')};
@@ -24,8 +24,8 @@ const ButtonPrimary = styled.button`
     filter: brightness(0.9);
   }
   img {
-    width: ${props => props.iconSize && `${props.iconSize}px`};
-    margin-right: ${props => props.iconSize && `25px`};
+    width: ${props => props.iconLeftSize && `${props.iconLeftSize}px`};
+    margin-right: ${props => props.iconLeftSize && `25px`};
   }
 `
 export default ButtonPrimary

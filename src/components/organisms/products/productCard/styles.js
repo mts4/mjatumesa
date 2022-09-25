@@ -13,6 +13,7 @@ const Card = styled.div`
   padding: 10px;
   margin-bottom: 70px;
   margin-right: 27px;
+  z-index: 1;
   .cardProduct {
     &__cover {
       display: block;

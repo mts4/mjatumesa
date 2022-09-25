@@ -11,6 +11,20 @@ const Wrapper = styled.div`
   background-color: ${COLORS.white};
   padding-bottom: 60px;
   padding-top: 120px;
+  .bgLeft {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 155px;
+    height: 874px;
+  }
+  .bgRight {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    width: 300px;
+    height: 963px;
+  }
 `
 export const ItemsBox = styled.div`
   display: flex;

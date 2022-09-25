@@ -3,6 +3,7 @@ import MetaTags from '../../organisms/metas'
 import TopSection from '../../organisms/home/TopSection'
 import SecondSection from '../../organisms/home/SecondSection'
 import ThirdSection from '../../organisms/home/ThirdSection'
+import FourSection from '../../organisms/home/FourSection'
 
 const HomeTemplate = () => {
   return (
@@ -12,6 +13,7 @@ const HomeTemplate = () => {
       <TopSection />
       <SecondSection />
       <ThirdSection />
+      <FourSection />
     </>
   )
 }

@@ -1,12 +1,12 @@
 // Svg
-import ArrowDown from '../../../assets/images/svg/icons/icon-arrow-down.svg'
+import Icon from 'cheffify-react-icons'
 // Styles
 import Arrow from './styles'
 
-const ArrowScrollDown = ({ bgColor }) => {
+const ArrowScrollDown = ({ bgColor, color, customStyles }) => {
   return (
-    <Arrow bgColor={bgColor}>
-      <img src={ArrowDown} alt='Icon arrow to down' className='icon' />
+    <Arrow bgColor={bgColor} style={customStyles && customStyles}>
+      <Icon name='angle-down' size={30} color={color} />
     </Arrow>
   )
 }
