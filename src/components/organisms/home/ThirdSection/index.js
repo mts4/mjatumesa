@@ -30,7 +30,7 @@ const ThirdSection = () => {
         ))}
       </ItemsBox>
       <Button
-        iconLeft={<IconStore />}
+        iconLeft={IconStore}
         text='Visitar tienda'
         bgColor={COLORS.white}
         color={COLORS.salmon}

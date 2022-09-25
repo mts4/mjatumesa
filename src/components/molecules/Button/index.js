@@ -22,7 +22,7 @@ const Button = ({
       iconLeftSize={iconLeftSize}
       style={customStyle}
     >
-      {iconLeft && <img src={iconLeft.type} />}
+      {iconLeft && <img src={iconLeft} />}
       {text}
     </ButtonPrimary>
   )

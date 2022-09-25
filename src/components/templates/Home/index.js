@@ -4,6 +4,8 @@ import TopSection from '../../organisms/home/TopSection'
 import SecondSection from '../../organisms/home/SecondSection'
 import ThirdSection from '../../organisms/home/ThirdSection'
 import FourSection from '../../organisms/home/FourSection'
+import FiveSection from '../../organisms/home/FiveSection'
+import Footer from '../../organisms/footer'
 
 const HomeTemplate = () => {
   return (
@@ -14,6 +16,8 @@ const HomeTemplate = () => {
       <SecondSection />
       <ThirdSection />
       <FourSection />
+      <FiveSection />
+      <Footer />
     </>
   )
 }
