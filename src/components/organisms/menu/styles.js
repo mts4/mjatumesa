@@ -13,15 +13,22 @@ const Menu = styled.div`
       padding: 40px 30px 30px 100px;
     }
     @media (max-width: 991px) {
-      flex-direction: column;
-      padding: 30px;
+      padding: 11px 25px 11px 25px;
     }
     &__logo {
       width: 100%;
       max-width: 116px;
+
+      @media (max-width: 991px) {
+        width: 87px;
+        height: 51px;
+      }
     }
     &__links {
       display: flex;
+      @media (max-width: 991px) {
+        display: none;
+      }
       &-contain {
         display: flex;
         align-items: center;

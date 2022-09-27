@@ -13,6 +13,13 @@ const Button = styled.div`
   margin-right: 10px;
   height: 16px;
   transition: opacity ease-in-out 0.3s;
+  @media (max-width: 991px) {
+    height: 20px;
+    width: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 0px;
+  }
   &:hover {
     opacity: 0.9;
   }
@@ -20,6 +27,10 @@ const Button = styled.div`
     font-size: 12px;
     color: ${COLORS.white};
     padding-left: 10px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
 `
 export default Button

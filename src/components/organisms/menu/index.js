@@ -1,4 +1,5 @@
 import BtnOrderFood from '../../molecules/BtnOrderFood'
+import BtnAccount from '../../molecules/BtnAccount'
 // Icons
 import Icon from 'cheffify-react-icons'
 // Utils
@@ -9,7 +10,6 @@ import Logo from '../../../assets/images/svg/logos/cheffify.svg'
 import MenuSvg from '../../../assets/images/svg/img/menu-bg.svg'
 // Styles
 import Menu from './styles'
-import BtnAccount from '../../molecules/BtnAccount'
 
 const Navbar = () => {
   return (
@@ -41,7 +41,7 @@ const Navbar = () => {
             bgColor={COLORS.salmon}
             icon='bell'
             iconColor={COLORS.white}
-            sizeIcon={13}
+            sizeIcon={15}
           />
           <BtnAccount
             text='Mi cuenta'
@@ -49,7 +49,7 @@ const Navbar = () => {
             iconLeft='account'
             iconRight='cart'
             iconColor={COLORS.white}
-            sizeIcon={13}
+            sizeIcon={15}
           />
         </div>
       </div>

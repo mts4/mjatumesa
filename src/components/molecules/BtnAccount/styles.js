@@ -2,7 +2,7 @@ import styled from 'styled-components'
 // Utils
 import { COLORS } from '../../../theme/css/global.colors'
 
-const Button = styled.div`
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
   border-radius: 16px;
@@ -12,6 +12,11 @@ const Button = styled.div`
   justify-content: center;
   height: 16px;
   transition: opacity ease-in-out 0.3s;
+  @media (max-width: 991px) {
+    background-color: transparent;
+    padding: 8px 0px 8px 0px;
+    height: 20px;
+  }
   &:hover {
     opacity: 0.9;
   }
@@ -19,6 +24,9 @@ const Button = styled.div`
     font-size: 12px;
     color: ${COLORS.white};
     padding-left: 10px;
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
   .separator {
     height: 32px;
@@ -26,6 +34,17 @@ const Button = styled.div`
     background-color: ${COLORS.white};
     margin-left: 16px;
     margin-right: 20px;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  .icon {
+    @media (max-width: 991px) {
+      background-color: ${props => props.bgColor};
+      padding: 8px;
+      border-radius: 50%;
+      margin-left: 8px;
+    }
   }
 `
-export default Button
+export default Wrapper

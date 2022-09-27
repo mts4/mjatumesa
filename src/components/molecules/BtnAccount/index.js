@@ -1,6 +1,6 @@
 import Icon from 'cheffify-react-icons'
 // Styles
-import Button from './styles'
+import Wrapper from './styles'
 
 const BtnAccount = ({
   text,
@@ -11,12 +11,22 @@ const BtnAccount = ({
   sizeIcon,
 }) => {
   return (
-    <Button bgColor={bgColor}>
-      <Icon name={iconLeft} size={sizeIcon} color={iconColor} />
+    <Wrapper bgColor={bgColor}>
+      <Icon
+        name={iconLeft}
+        size={sizeIcon}
+        color={iconColor}
+        className='icon'
+      />
       <p className='text'>{text}</p>
       <div className='separator' />
-      <Icon name={iconRight} size={sizeIcon} color={iconColor} />
-    </Button>
+      <Icon
+        name={iconRight}
+        size={sizeIcon}
+        color={iconColor}
+        className='icon'
+      />
+    </Wrapper>
   )
 }
 
