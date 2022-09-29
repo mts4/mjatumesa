@@ -14,6 +14,12 @@ const Wrapper = styled.div`
     max-width: 620px;
     padding-left: 193px;
     padding-top: 120px;
+
+    @media (max-width: 991px) {
+      padding: 11px 25px 11px 25px;
+      max-width: 100%;
+      width: auto;
+    }
     &__title {
       width: 100%;
       max-width: 280px;
@@ -44,6 +50,19 @@ const Wrapper = styled.div`
         margin-left: 20px;
       }
     }
+    &__buttons {
+      @media (max-width: 1280px) {
+        display: flex;
+        flex-direction: column;
+      }
+      @media (max-width: 991px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .btnRight {
+        margin-left: 15px;
+      }
+    }
   }
   .blockRight {
     display: flex;
@@ -57,6 +76,9 @@ const Wrapper = styled.div`
       margin-bottom: auto;
       max-width: 850px;
       width: 100%;
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
   }
 `

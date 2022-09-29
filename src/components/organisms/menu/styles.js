@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 // Utils
 import { COLORS } from '../../../theme/css/global.colors'
+import { device } from '../../../theme/css/media.querys'
 
 const Menu = styled.div`
   .menu {
@@ -14,15 +15,15 @@ const Menu = styled.div`
     }
     @media (max-width: 991px) {
       padding: 11px 25px 11px 25px;
+      justify-content: none;
     }
     &__logo {
       width: 100%;
-      max-width: 116px;
-
-      @media (max-width: 991px) {
-        width: 87px;
-        height: 51px;
+      @media (${device.mobileS}) and (${device.ipad}) {
+        max-width: 200px;
       }
+
+      max-width: 116px;
     }
     &__links {
       display: flex;

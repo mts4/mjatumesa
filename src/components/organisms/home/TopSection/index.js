@@ -37,7 +37,7 @@ const TopSection = () => {
             bgColor={COLORS.white}
             width={240}
             borderColor={COLORS.salmon}
-            customStyle={{ marginLeft: 15 }}
+            className='btnRight'
           />
         </div>
       </div>
