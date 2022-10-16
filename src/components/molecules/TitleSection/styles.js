@@ -6,6 +6,7 @@ const Title = styled.h2`
   font-weight: 900;
   color: ${props =>
     props.colorTextFirst ? props.colorTextFirst : COLORS.violetDark};
+  text-align: ${props => (props.textAlign ? props.textAlign : 'initial')};
 
   span {
     color: ${COLORS.salmon};

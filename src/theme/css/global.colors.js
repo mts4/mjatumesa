@@ -11,4 +11,5 @@ export const COLORS = {
   lightGray: '#EDEDED',
   violetLight: '#646477',
   aqua: '#275C73',
+  roseLight: '#FCF3F2',
 }

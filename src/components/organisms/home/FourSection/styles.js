@@ -27,10 +27,12 @@ const Wrapper = styled.div`
     }
   }
   .blockRight {
-    img {
+    &__image {
       width: 49px;
       height: 35px;
       margin-right: 10px;
+      margin-bottom: 40px;
+      float: right;
     }
   }
 `

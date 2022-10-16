@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   background-color: ${COLORS.white};
   border-radius: 20px;
   margin-top: 10rem;
-  margin-bottom: 20px;
+  margin-bottom: 150px;
   .blockLeft {
     img {
       display: block;
@@ -23,6 +23,11 @@ const Wrapper = styled.div`
       color: ${COLORS.violetDark};
       margin-top: 25px;
       line-height: 28px;
+    }
+    &__image {
+      margin-top: 10px;
+      width: 263px;
+      height: 59px;
     }
   }
   .bgLeft {

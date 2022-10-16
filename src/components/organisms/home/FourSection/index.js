@@ -1,8 +1,11 @@
 import TitleSection from '../../../molecules/TitleSection'
 import Button from '../../../molecules/Button'
 import ArrowScrollDown from '../../../molecules/ArrowScrollDown'
-// Svg
+import Carousel from '../../../molecules/Carousel'
+// Images
 import bgPoints from '../../../../assets/images/svg/img/bg-points.svg'
+import Slide1 from '../../../../assets/images/png/slider/slide1.png'
+// import Slide2 from '../../../../assets/images/png/slider/slide2.png'
 // Utils
 import { COLORS } from '../../../../theme/css/global.colors'
 // Styles
@@ -31,7 +34,8 @@ const FourSection = () => {
         />
       </div>
       <div className='blockRight'>
-        <img src={bgPoints} />
+        <img src={bgPoints} className='blockRight__image' />
+        <Carousel images={<Slide1 />} />
       </div>
       <ArrowScrollDown
         bgColor={COLORS.aqua}
