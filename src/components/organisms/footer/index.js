@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='footer__bottom'>
-          <p>
+          <p className='footer__bottom-desktop'>
             <strong>Política de privacidad</strong>: nuestro sitio web emplea la
             información con el fin de proporcionar el mejor servicio posible,
             particularmente para mantener un registro de usuarios, de pedidos en
@@ -68,6 +68,9 @@ const Footer = () => {
             o que pueda brindarle algún beneficio, estos correos electrónicos
             serán enviados a la dirección que usted proporcione y podrán ser
             cancelados en cualquier momento. <span>Seguir leyendo +</span>
+          </p>
+          <p className='footer__bottom-mobile'>
+            Política de privacidad. <a href=''>Leer aquí</a>
           </p>
         </div>
       </div>

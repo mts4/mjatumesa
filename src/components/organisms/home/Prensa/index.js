@@ -14,7 +14,7 @@ const Prensa = () => {
         textFirst='Ademas de dar de comer,'
         textSecond='damos de qué hablar.'
         lineBreak={true}
-        textAlign={true}
+        textAlign='center'
       />
       <div className='container'>
         <a
@@ -29,6 +29,7 @@ const Prensa = () => {
           href='https://www.instagram.com/elservirsen/?hl=es-la/'
           target='_blank'
           rel='noopener noreferrer'
+          className='container__link'
         >
           <img src={Ed} className='container__link-image' />
         </a>
@@ -36,6 +37,7 @@ const Prensa = () => {
           href='https://www.instagram.com/elservirsen/?hl=es-la/'
           target='_blank'
           rel='noopener noreferrer'
+          className='container__link'
         >
           <img src={Elservirsen} className='container__link-image' />
         </a>
@@ -43,6 +45,7 @@ const Prensa = () => {
           href='https://www.instagram.com/elservirsen/?hl=es-la'
           target='_blank'
           rel='noopener noreferrer'
+          className='container__link'
         >
           <img src={MesaMantel} className='container__link-image' />
         </a>

@@ -10,8 +10,9 @@ const ButtonPrimary = styled.button`
   width: 100%;
   max-width: ${props => (props.width ? `${props.width}px` : '250px')};
   border-radius: 32px;
-  padding: 20px 0px 20px 0px;
+  padding: 15px 0px 15px 0px;
   font-size: ${props => (props.fontSize ? `${props.fontSize}px` : '18px')};
+  margin: ${props => (props.margin ? `${props.margin}px` : '0')};
   color: ${props => (props.color ? props.color : COLORS.white)};
   border: 2px solid
     ${props => (props.borderColor ? props.borderColor : COLORS.salmon)};

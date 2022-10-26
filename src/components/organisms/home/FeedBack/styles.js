@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { COLORS } from '../../../../theme/css/global.colors'
+import { device } from '../../../../theme/css/media.querys'
 
 const Wrapper = styled.div`
   display: flex;
@@ -7,16 +8,17 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 15px #d7746666;
-    width: 100%;
-    max-width: 1110px;
     padding: 60px 90px 60px 90px;
     border-radius: 15px;
+
     &__description {
       margin-top: 25px;
       text-align: center;
@@ -31,6 +33,11 @@ const Wrapper = styled.div`
       justify-content: space-between;
       width: 100%;
       margin-top: 50px;
+      @media ${device.ipad} {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
       &__card {
         display: flex;
         justify-content: center;
@@ -38,6 +45,9 @@ const Wrapper = styled.div`
         flex-direction: column;
         width: 100%;
         max-width: 270px;
+        @media ${device.ipad} {
+          margin-bottom: 20px;
+        }
         &-image {
           width: 55px;
           height: 55px;

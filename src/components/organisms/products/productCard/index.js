@@ -6,15 +6,17 @@ import Card from './styles'
 const ProductCard = () => {
   return (
     <Card className='cardProduct'>
-      <div className='cardProduct__cover'>
-        <img src={imageFood} className='cardProduct__cover-image' />
-      </div>
-      <div className='cardProduct__attributes'>
-        <h5 className='cardProduct__attributes-title'>Charquican</h5>
-        <p className='cardProduct__attributes-description'>
-          Exquisito Guiso de charqui con porotos, papas, zapallo y otras
-          legumbres.
-        </p>
+      <div className='cardProduct__header'>
+        <div className='cardProduct__cover'>
+          <img src={imageFood} className='cardProduct__cover-image' />
+        </div>
+        <div className='cardProduct__attributes'>
+          <h5 className='cardProduct__attributes-title'>Charquican</h5>
+          <p className='cardProduct__attributes-description'>
+            Exquisito Guiso de charqui con porotos, papas, zapallo y otras
+            legumbres.
+          </p>
+        </div>
       </div>
       <div className='cardProduct__sizePeople'>
         <span className='cardProduct__sizePeople-price'>$3.550</span>

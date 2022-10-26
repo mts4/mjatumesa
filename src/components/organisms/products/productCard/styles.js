@@ -1,6 +1,7 @@
 import styled from 'styled-components'
-import { COLORS } from '../../../../theme/css/global.colors'
 import ArrowDown from '../../../../assets/images/svg/icons/arrow-select.svg'
+import { COLORS } from '../../../../theme/css/global.colors'
+import { device } from '../../../../theme/css/media.querys'
 
 const Card = styled.div`
   display: flex;
@@ -12,15 +13,39 @@ const Card = styled.div`
   border-radius: 15px;
   padding: 10px;
   margin-bottom: 70px;
-  margin-right: 27px;
+  margin-right: 13px;
+  margin-left: 13px;
   z-index: 1;
+  @media ${device.ipad} {
+    margin-bottom: 26px;
+  }
   .cardProduct {
+    &__header {
+      display: flex;
+      @media ${device.mobileS} {
+        flex-direction: row;
+        margin-bottom: 20px;
+      }
+      @media ${device.tablet} {
+        flex-direction: column;
+        margin-bottom: 0px;
+      }
+    }
     &__cover {
       display: block;
       width: 100%;
       &-image {
-        width: 100%;
         border-radius: 15px;
+        @media ${device.mobileS} {
+          width: 111px;
+          height: 110px;
+          margin-right: 15px;
+        }
+        @media ${device.tablet} {
+          width: 100%;
+          margin-right: 0px;
+          height: auto;
+        }
       }
     }
     &__attributes {
@@ -53,7 +78,6 @@ const Card = styled.div`
       }
       &-select {
         width: 100%;
-        max-width: 120px;
         background-color: ${COLORS.lightGray};
         border: none;
         padding: 7px 20px 7px 20px;
@@ -66,6 +90,12 @@ const Card = styled.div`
         background-repeat: no-repeat;
         background-position-x: 90%;
         background-position-y: center;
+        @media ${device.mobileS} {
+          max-width: 165px;
+        }
+        @media ${device.tablet} {
+          max-width: 120px;
+        }
       }
     }
     &__controlsBox {

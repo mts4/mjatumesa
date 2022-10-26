@@ -20,6 +20,7 @@ const ThirdSection = () => {
       <TitleSection
         textFirst='Pensamos por ti. '
         textSecond='Resolvemos por ti.'
+        textAlign='center'
       />
       <ItemsBox>
         {LIST_INFO.map((item, index) => (

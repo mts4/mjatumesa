@@ -29,6 +29,7 @@ const TopSection = () => {
             bgColor={COLORS.salmon}
             width={240}
             borderColor={COLORS.salmon}
+            margin={5}
           />
           <Button
             text='Saber más'
@@ -37,7 +38,7 @@ const TopSection = () => {
             bgColor={COLORS.white}
             width={240}
             borderColor={COLORS.salmon}
-            className='btnRight'
+            margin={5}
           />
         </div>
       </div>

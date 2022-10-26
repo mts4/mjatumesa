@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { COLORS } from '../../../../theme/css/global.colors'
+import { device } from '../../../../theme/css/media.querys'
 
 const Wrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   max-width: 1110px;
   background-color: ${COLORS.aqua};
   padding-bottom: 60px;
@@ -15,8 +15,25 @@ const Wrapper = styled.div`
   border-radius: 20px;
   padding: 60px 23px 35px 80px;
   margin-bottom: 20px;
+  @media (max-width: 1250px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @media ${device.ipad} {
+    flex-direction: column;
+    padding: 30px 10px 10px 10px;
+  }
   .blockLeft {
     max-width: 450px;
+    margin-right: 20px;
+    @media ${device.ipad} {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      margin-right: 0px;
+    }
     &__description {
       color: ${COLORS.white};
       margin-top: 40px;
@@ -24,6 +41,10 @@ const Wrapper = styled.div`
       font-size: 19px;
       line-height: 30px;
       margin-bottom: 5rem;
+      @media ${device.ipad} {
+        margin-bottom: 1rem;
+        max-width: 257px;
+      }
     }
   }
   .blockRight {
@@ -33,6 +54,20 @@ const Wrapper = styled.div`
       margin-right: 10px;
       margin-bottom: 40px;
       float: right;
+      @media ${device.ipad} {
+        display: none;
+      }
+    }
+    @media ${device.ipad} {
+      margin-top: 70px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+  }
+  .customTitle {
+    @media ${device.ipad} {
+      text-align: center;
     }
   }
 `

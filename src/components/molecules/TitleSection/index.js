@@ -8,12 +8,14 @@ const TitleSection = ({
   fontSize,
   lineBreak,
   textAlign,
+  className,
 }) => {
   return (
     <Title
       fontSize={fontSize}
       colorTextFirst={colorTextFirst}
-      textAlign='center'
+      textAlign={textAlign}
+      className={className && className}
     >
       {textFirst} {lineBreak === true && <br />} <span>{textSecond}</span>
     </Title>

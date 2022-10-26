@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { COLORS } from '../../../theme/css/global.colors'
 
 const BoxCarousel = styled.div`
-  width: 517px;
+  width: 100%;
+  max-width: 517px;
   height: 378px;
   .swiper {
     width: 100%;

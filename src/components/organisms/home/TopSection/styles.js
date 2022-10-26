@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 // Utils
 import { COLORS } from '../../../../theme/css/global.colors'
+import { device } from '../../../../theme/css/media.querys'
 
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
   background-color: ${COLORS.white};
   justify-content: space-between;
+  @media ${device.ipad} {
+    flex-direction: column;
+  }
   .blockLeft {
     display: flex;
     flex-direction: column;
@@ -58,9 +62,6 @@ const Wrapper = styled.div`
       @media (max-width: 991px) {
         flex-direction: row;
         justify-content: space-between;
-      }
-      .btnRight {
-        margin-left: 15px;
       }
     }
   }

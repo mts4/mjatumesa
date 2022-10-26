@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { COLORS } from '../../../../theme/css/global.colors'
+import { device } from '../../../../theme/css/media.querys'
 
 const Wrapper = styled.div`
   position: relative;
@@ -10,14 +11,27 @@ const Wrapper = styled.div`
   border-radius: 20px;
   margin-top: 10rem;
   margin-bottom: 150px;
+  @media ${device.ipad} {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
   .blockLeft {
     img {
-      display: block;
-      width: 450px;
+      max-width: 450px;
+      width: 100%;
+      @media ${device.ipad} {
+        display: none;
+      }
     }
   }
   .blockRight {
     max-width: 569.18px;
+    @media ${device.ipad} {
+      display: flex;
+      flex-direction: column;
+      max-width: 350px;
+      width: 100%;
+    }
     p {
       font-size: 19px;
       color: ${COLORS.violetDark};
@@ -35,6 +49,9 @@ const Wrapper = styled.div`
     left: 0;
     width: 132px;
     height: 598px;
+    @media ${device.ipad} {
+      display: none;
+    }
   }
   .bgRight {
     position: absolute;
@@ -42,6 +59,9 @@ const Wrapper = styled.div`
     bottom: -370px;
     width: 185px;
     height: 571px;
+    @media ${device.ipad} {
+      display: none;
+    }
   }
 `
 

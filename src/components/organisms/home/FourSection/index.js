@@ -19,6 +19,7 @@ const FourSection = () => {
           textFirst='Cocina cuando '
           colorTextFirst={COLORS.white}
           textSecond='quieras cocinar'
+          className='customTitle'
         />
         <p className='blockLeft__description'>
           En Cheffify nos preocupamos por ti, ya sea que pidas comida{' '}

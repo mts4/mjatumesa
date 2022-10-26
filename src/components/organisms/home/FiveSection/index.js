@@ -2,6 +2,7 @@ import TitleSection from '../../../molecules/TitleSection'
 import ButtonCircleDown from '../../../molecules/ButtonCircleDown'
 // SVG
 import CoverPeople from '../../../../assets/images/svg/img/people-cover.svg'
+import CoverPeopleMobile from '../../../../assets/images/png/cover-people-mobile.png'
 import ComeHouse from '../../../../assets/images/svg/img/come.svg'
 import bgLeft from '../../../../assets/images/svg/img/bg-five-left.svg'
 import bgRight from '../../../../assets/images/svg/img/bg-five-right.svg'
@@ -12,7 +13,8 @@ const FiveSection = () => {
   return (
     <Wrapper>
       <div className='blockLeft'>
-        <img src={CoverPeople} />
+        <img src={CoverPeople} className='visible-desktop' />
+        <img src={CoverPeopleMobile} className='visible-mobile' />
       </div>
       <div className='blockRight'>
         <TitleSection textFirst='Somos' textSecond='lo que comemos' />
@@ -37,6 +39,7 @@ const FiveSection = () => {
           hogar, tu oficina o allá donde te encuentres. Come como en casa.
         </p>
         <img src={ComeHouse} className='blockRight__image' />
+
         <ButtonCircleDown customStyle={{ marginTop: 60 }} />
       </div>
       <img src={bgLeft} className='bgLeft' />
