@@ -11,9 +11,12 @@ const FooterBox = styled.div`
   .footer {
     display: flex;
     flex-direction: column;
-    padding: 55px 150px 40px 150px;
+    padding: 40px 170px 30px 190px;
+    @media (max-width: 1160px) {
+      padding: 40px 30px 30px 100px;
+    }
     @media ${device.ipad} {
-      padding: 30px;
+      padding: 11px 25px 11px 25px;
     }
     &__top {
       display: flex;

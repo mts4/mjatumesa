@@ -11,7 +11,7 @@ const ButtonPrimary = styled.button`
   width: 100%;
   max-width: ${props => (props.width ? `${props.width}px` : '250px')};
   @media ${device.ipad} {
-    max-width: 100%;
+    max-width: 300px;
   }
   border-radius: 32px;
   padding: 15px 0px 15px 0px;
