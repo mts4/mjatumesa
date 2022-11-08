@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
   background-color: ${COLORS.white};
   border-radius: 20px;
   margin-top: 10rem;
@@ -14,10 +13,13 @@ const Wrapper = styled.div`
   @media ${device.ipad} {
     flex-direction: column-reverse;
     justify-content: center;
+    padding: 20px;
+    margin-top: 10rem;
   }
   .blockLeft {
+    max-width: 450px;
+    width: 100%;
     img {
-      max-width: 450px;
       width: 100%;
       @media ${device.ipad} {
         display: none;

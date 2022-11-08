@@ -18,7 +18,12 @@ const Wrapper = styled.div`
     box-shadow: 0px 0px 15px #d7746666;
     padding: 60px 90px 60px 90px;
     border-radius: 15px;
-
+    @media ${device.ipad} {
+      padding: 60px 15px 60px 15px;
+      h2 {
+        text-align: center;
+      }
+    }
     &__description {
       margin-top: 25px;
       text-align: center;
@@ -45,6 +50,7 @@ const Wrapper = styled.div`
         flex-direction: column;
         width: 100%;
         max-width: 270px;
+        padding: 0px 20px 0px 20px;
         @media ${device.ipad} {
           margin-bottom: 20px;
         }

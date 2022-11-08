@@ -12,6 +12,9 @@ const FooterBox = styled.div`
     display: flex;
     flex-direction: column;
     padding: 55px 150px 40px 150px;
+    @media ${device.ipad} {
+      padding: 30px;
+    }
     &__top {
       display: flex;
       justify-content: space-between;

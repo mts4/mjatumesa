@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 // Utils
 import { COLORS } from '../../../theme/css/global.colors'
+import { device } from '../../.../../../theme/css/media.querys'
 
 const ButtonPrimary = styled.button`
   display: ${props => props.iconLeft && `flex`};
@@ -9,6 +10,9 @@ const ButtonPrimary = styled.button`
   cursor: pointer;
   width: 100%;
   max-width: ${props => (props.width ? `${props.width}px` : '250px')};
+  @media ${device.ipad} {
+    max-width: 100%;
+  }
   border-radius: 32px;
   padding: 15px 0px 15px 0px;
   font-size: ${props => (props.fontSize ? `${props.fontSize}px` : '18px')};
