@@ -1,7 +1,7 @@
 import TitleSection from '../../../molecules/TitleSection'
 import Button from '../../../molecules/Button'
 import ArrowScrollDown from '../../../molecules/ArrowScrollDown'
-import Carousel from '../../../molecules/Carousel'
+import CarouselHome from '../../../molecules/Carousels/CarouselHome'
 // Images
 import bgPoints from '../../../../assets/images/svg/img/bg-points.svg'
 import Slide1 from '../../../../assets/images/png/slider/slide1.png'
@@ -36,7 +36,7 @@ const FourSection = () => {
       </div>
       <div className='blockRight'>
         <img src={bgPoints} className='blockRight__image' />
-        <Carousel images={<Slide1 />} />
+        <CarouselHome images={<Slide1 />} />
       </div>
       <ArrowScrollDown
         bgColor={COLORS.aqua}

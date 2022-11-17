@@ -8,7 +8,7 @@ import { Pagination } from 'swiper'
 // Styled
 import BoxCarousel from './styles'
 
-const Carousel = ({ images }) => {
+const CarouselHome = ({ images }) => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -33,4 +33,4 @@ const Carousel = ({ images }) => {
   )
 }
 
-export default Carousel
+export default CarouselHome
