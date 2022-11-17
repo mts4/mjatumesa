@@ -43,7 +43,7 @@ const BoxCarousel = styled.div`
     border-radius: 20px;
     @media ${device.ipad} {
       background-image: url(${SliderImageMobile});
-      height: 263px;
+      height: auto;
       padding-bottom: 3rem;
       padding-right: 3rem;
     }
@@ -58,6 +58,10 @@ const BoxCarousel = styled.div`
       color: ${COLORS.violetDark};
       line-height: 25px;
       margin-bottom: 20px;
+      max-width: 650px;
+      @media ${device.ipad} {
+        max-width: 100%;
+      }
     }
     &__btn {
       color: ${COLORS.violetDark};
