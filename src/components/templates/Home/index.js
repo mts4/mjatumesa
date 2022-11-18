@@ -1,5 +1,6 @@
 import MetaTags from '../../organisms/metas'
 import Navbar from '../../organisms/menu'
+import Cesta from '../../organisms/cesta'
 import TopSection from '../../organisms/home/TopSection'
 import SecondSection from '../../organisms/home/SecondSection'
 import ThirdSection from '../../organisms/home/ThirdSection'
@@ -14,6 +15,7 @@ const HomeTemplate = () => {
     <>
       <MetaTags title='Cheffify - Home' description='descripcion home' />
       <Navbar />
+      <Cesta />
       <TopSection />
       <SecondSection />
       <ThirdSection />

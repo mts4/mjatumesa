@@ -140,6 +140,7 @@ const Card = styled.div`
         font-family: 'Raleway';
         font-weight: 500;
         font-size: 15px;
+        cursor: pointer;
       }
     }
   }

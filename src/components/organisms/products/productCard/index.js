@@ -1,25 +1,26 @@
 import Icon from 'cheffify-react-icons'
-import imageFood from '../../../../assets/images/jpg/food/charquican.jpg'
+// Utils
+import { formatPriceCLP } from '../../../../utils/formats'
 // Styles
 import Card from './styles'
 
-const ProductCard = () => {
+const ProductCard = product => {
+  const { title, description, image, price } = product.data
   return (
     <Card className='cardProduct'>
       <div className='cardProduct__header'>
         <div className='cardProduct__cover'>
-          <img src={imageFood} className='cardProduct__cover-image' />
+          <img src={image} className='cardProduct__cover-image' />
         </div>
         <div className='cardProduct__attributes'>
-          <h5 className='cardProduct__attributes-title'>Charquican</h5>
-          <p className='cardProduct__attributes-description'>
-            Exquisito Guiso de charqui con porotos, papas, zapallo y otras
-            legumbres.
-          </p>
+          <h5 className='cardProduct__attributes-title'>{title}</h5>
+          <p className='cardProduct__attributes-description'>{description}</p>
         </div>
       </div>
       <div className='cardProduct__sizePeople'>
-        <span className='cardProduct__sizePeople-price'>$3.550</span>
+        <span className='cardProduct__sizePeople-price'>
+          {formatPriceCLP(price)}
+        </span>
         <select className='cardProduct__sizePeople-select'>
           <option value=''>4 Personas</option>
         </select>

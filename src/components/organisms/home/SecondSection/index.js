@@ -2,6 +2,8 @@ import ProductCard from '../../products/productCard'
 import TitleSection from '../../../molecules/TitleSection'
 import ArrowScrollDown from '../../../molecules/ArrowScrollDown'
 import Button from '../../../molecules/Button'
+// Products
+import { PRODUCTS } from '../../../../config/db.products'
 // Svg
 import bgLeft from '../../../../assets/images/svg/img/bg-secondSection-left.svg'
 import bgRight from '../../../../assets/images/svg/img/bg-secondSection-right.svg'
@@ -20,10 +22,10 @@ const SecondSection = () => {
         nosotros también, por eso dejamos una sugerencia, tú eliges.
       </p>
       <div className='products'>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {PRODUCTS &&
+          PRODUCTS.map(product => (
+            <ProductCard key={product.id} data={product} />
+          ))}
       </div>
       <Button
         text='Más platos'

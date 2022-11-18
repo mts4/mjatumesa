@@ -9,7 +9,9 @@ export const COLORS = {
   gris: '#C2C2CE',
   grey: '#80808B',
   lightGray: '#EDEDED',
+  softGray: '#BEBEC9',
   violetLight: '#646477',
   aqua: '#275C73',
   roseLight: '#FCF3F2',
+  shadowSalmon: '#d7746666',
 }
