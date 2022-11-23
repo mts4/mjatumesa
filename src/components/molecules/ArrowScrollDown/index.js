@@ -1,4 +1,4 @@
-// Svg
+// Icons
 import Icon from 'cheffify-react-icons'
 // Styles
 import Arrow from './styles'

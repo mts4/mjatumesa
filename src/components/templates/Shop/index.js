@@ -1,6 +1,8 @@
 import MetaTags from '../../organisms/metas'
 import Navbar from '../../organisms/menu'
 import CarouselProductos from '../../molecules/Carousels/CarouselProducts'
+import Filter from '../../organisms/filter'
+import ProductsFilter from '../../organisms/products/productsFilter'
 import Footer from '../../organisms/footer'
 
 import Wrapper from './styles'
@@ -12,6 +14,10 @@ const ShopTemplate = () => {
       <Navbar />
       <Wrapper>
         <CarouselProductos />
+        <div className='container'>
+          <Filter />
+          <ProductsFilter />
+        </div>
       </Wrapper>
       <Footer />
     </>

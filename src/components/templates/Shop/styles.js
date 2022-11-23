@@ -9,6 +9,13 @@ const Wrapper = styled.div`
   @media ${device.ipad} {
     padding: 11px 25px 11px 25px;
   }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
 `
 
 export default Wrapper

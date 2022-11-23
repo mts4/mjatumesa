@@ -10,6 +10,7 @@ export const COLORS = {
   grey: '#80808B',
   lightGray: '#EDEDED',
   softGray: '#BEBEC9',
+  lightGrayBorderProduct: '#E8E8EF',
   violetLight: '#646477',
   aqua: '#275C73',
   roseLight: '#FCF3F2',
