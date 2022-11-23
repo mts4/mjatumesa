@@ -1,4 +1,20 @@
-import imageFood from '../assets/images/jpg/food/charquican.jpg'
+import AlbondigasCarne from '../assets/images/jpg/food/albondigasdecarne.jpg'
+import Charquican from '../assets/images/jpg/food/charquican.jpg'
+import ArrozChaufan from '../assets/images/jpg/food/arrozchaufan.jpg'
+import AsadoAleman from '../assets/images/jpg/food/asadoalemanmostaza.jpg'
+import CremaZapallo from '../assets/images/jpg/food/cremazapallo.jpg'
+import GansoOlla from '../assets/images/jpg/food/gansoalaolla.jpg'
+import GratinPapas from '../assets/images/jpg/food/gratindepapas.jpg'
+import LasanaPollo from '../assets/images/jpg/food/lasanapolloespinaca.jpg'
+import LomoCerdo from '../assets/images/jpg/food/lomodecerdo.jpg'
+import Pancakes from '../assets/images/jpg/food/pancakes.jpg'
+import PiePollo from '../assets/images/jpg/food/piedepollo.jpg'
+import PolloAsado from '../assets/images/jpg/food/polloasadoarroz.jpg'
+import PurePapas from '../assets/images/jpg/food/puredepapas.jpg'
+import QuichePollo from '../assets/images/jpg/food/quichepollopimenton.jpg'
+import StrogonoffPollo from '../assets/images/jpg/food/strogonoffpollo.jpg'
+import TallarinesPancakes from '../assets/images/jpg/food/tallarinespanquequessalmon.jpg'
+import PolloTocino from '../assets/images/jpg/food/pollotocino.jpg'
 
 export const PRODUCTS = [
   {
@@ -7,7 +23,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3100,
-    image: imageFood,
+    image: Pancakes,
   },
   {
     id: 2,
@@ -15,7 +31,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
-    image: imageFood,
+    image: CremaZapallo,
   },
   {
     id: 3,
@@ -23,7 +39,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
-    image: imageFood,
+    image: ArrozChaufan,
   },
   {
     id: 4,
@@ -31,7 +47,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 5200,
-    image: imageFood,
+    image: PolloAsado,
   },
   {
     id: 5,
@@ -39,7 +55,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
-    image: imageFood,
+    image: PiePollo,
   },
   {
     id: 6,
@@ -47,7 +63,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
-    image: imageFood,
+    image: QuichePollo,
   },
   {
     id: 7,
@@ -55,7 +71,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
-    image: imageFood,
+    image: TallarinesPancakes,
   },
   {
     id: 8,
@@ -63,7 +79,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
-    image: imageFood,
+    image: GratinPapas,
   },
   {
     id: 9,
@@ -71,7 +87,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
-    image: imageFood,
+    image: PolloTocino,
   },
   {
     id: 10,
@@ -79,7 +95,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3450,
-    image: imageFood,
+    image: PolloTocino,
   },
   {
     id: 11,
@@ -87,7 +103,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
-    image: imageFood,
+    image: LasanaPollo,
   },
   {
     id: 12,
@@ -95,7 +111,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
-    image: imageFood,
+    image: Charquican,
   },
   {
     id: 13,
@@ -103,7 +119,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 2950,
-    image: imageFood,
+    image: AsadoAleman,
   },
   {
     id: 14,
@@ -111,7 +127,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 2100,
-    image: imageFood,
+    image: PurePapas,
   },
   {
     id: 15,
@@ -119,7 +135,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3950,
-    image: imageFood,
+    image: LomoCerdo,
   },
   {
     id: 16,
@@ -127,7 +143,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3950,
-    image: imageFood,
+    image: StrogonoffPollo,
   },
   {
     id: 17,
@@ -135,7 +151,7 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3950,
-    image: imageFood,
+    image: AlbondigasCarne,
   },
   {
     id: 18,
@@ -143,6 +159,6 @@ export const PRODUCTS = [
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3950,
-    image: imageFood,
+    image: GansoOlla,
   },
 ]

@@ -10,6 +10,7 @@ export const productosSlice = createSlice({
   initialState,
   reducers: {
     showOrHideCesta: state => {
+      console.log('click')
       state.isVisibleCesta = !state.isVisibleCesta
     },
     addProduct: (state, action) => {

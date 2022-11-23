@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   position: absolute;
   width: 301px;
   right: 170px;
-  z-index: 1;
+  z-index: 2;
   box-shadow: 0px 0px 8px ${COLORS.shadowSalmon};
   background-color: ${COLORS.white};
   border-radius: 15px;
