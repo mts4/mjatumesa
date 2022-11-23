@@ -1,3 +1,4 @@
+import { useState } from 'react'
 // Input Range
 import Slider from 'rc-slider'
 // Icons
@@ -6,7 +7,6 @@ import Icon from 'cheffify-react-icons'
 import { formatPriceCLP } from '../../../utils/formats'
 // Styles
 import Wrapper from './styles'
-import { useState } from 'react'
 
 const Filter = () => {
   const [inputRange, setInputRange] = useState([])

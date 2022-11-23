@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   .title {
     display: flex;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 29px;
     border-bottom: 1px solid ${COLORS.lightGrayBorderProduct};
     h5 {
       ${title};
