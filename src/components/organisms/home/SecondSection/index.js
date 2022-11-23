@@ -24,7 +24,7 @@ const SecondSection = () => {
       </p>
       <div className='products'>
         {PRODUCTS &&
-          PRODUCTS.map(product => (
+          PRODUCTS.slice(0, 4).map(product => (
             <ProductCard key={product.id} data={product} />
           ))}
       </div>

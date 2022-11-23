@@ -30,6 +30,7 @@ const Wrapper = styled.div`
   .products {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     @media ${device.ipad} {
       justify-content: center;
       align-items: center;
