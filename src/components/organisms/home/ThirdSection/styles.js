@@ -32,6 +32,10 @@ const Wrapper = styled.div`
       display: none;
     }
   }
+  .link {
+    width: 100%;
+    max-width: 250px;
+  }
 `
 export const ItemsBox = styled.div`
   display: flex;

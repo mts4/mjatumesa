@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from '../../molecules/Button'
 // SVG
 import Logo from '../../../assets/images/svg/logos/cheffify.svg'
@@ -18,11 +19,13 @@ const Footer = () => {
       <hr />
       <div className='footer'>
         <div className='footer__top'>
-          <img
-            src={Logo}
-            className='footer__top-logo'
-            alt='Logo Cheffify Footer'
-          />
+          <Link to='/'>
+            <img
+              src={Logo}
+              className='footer__top-logo'
+              alt='Logo Cheffify Footer'
+            />
+          </Link>
           <Button
             text='Pide por Whatsapp'
             fontSize={16}

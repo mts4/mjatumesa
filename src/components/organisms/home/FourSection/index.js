@@ -10,6 +10,7 @@ import Slide1 from '../../../../assets/images/png/slider/slide1.png'
 import { COLORS } from '../../../../theme/css/global.colors'
 // Styles
 import Wrapper from './styles'
+import { Link } from 'react-router-dom'
 
 const FourSection = () => {
   return (
@@ -27,12 +28,14 @@ const FourSection = () => {
           Nosotros hacemos el trabajo duro, tú solo cocina el fin de semana para
           tus amigos o para esa cena tan especial.
         </p>
-        <Button
-          text='Hacer Pedido'
-          bgColor={COLORS.salmon}
-          color={COLORS.white}
-          fontSize={17}
-        />
+        <Link to='/shop'>
+          <Button
+            text='Hacer Pedido'
+            bgColor={COLORS.salmon}
+            color={COLORS.white}
+            fontSize={17}
+          />
+        </Link>
       </div>
       <div className='blockRight'>
         <img src={bgPoints} className='blockRight__image' />

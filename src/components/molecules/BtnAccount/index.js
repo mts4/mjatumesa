@@ -9,6 +9,7 @@ const BtnAccount = ({
   iconRight,
   iconColor,
   sizeIcon,
+  onClickCesta,
 }) => {
   return (
     <Wrapper bgColor={bgColor}>
@@ -25,6 +26,7 @@ const BtnAccount = ({
         size={sizeIcon}
         color={iconColor}
         className='icon'
+        onClick={onClickCesta}
       />
     </Wrapper>
   )

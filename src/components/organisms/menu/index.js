@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom'
+// Redux
+import { useDispatch } from 'react-redux'
+import { showOrHideCesta } from '../../../redux/productosSlice'
 // Molecules
 import BtnOrderFood from '../../molecules/BtnOrderFood'
 import BtnAccount from '../../molecules/BtnAccount'
@@ -13,6 +17,7 @@ import MenuSvg from '../../../assets/images/svg/img/menu-bg.svg'
 import Menu from './styles'
 
 const Navbar = () => {
+  const dispatch = useDispatch()
   return (
     <Menu>
       <div className='menu'>
@@ -23,7 +28,10 @@ const Navbar = () => {
             alt='Elemento absolute del menu'
           />
         </div>
-        <img src={Logo} className='menu__logo' alt='Logo Cheffify' />
+        <Link to='/'>
+          <img src={Logo} className='menu__logo' alt='Logo Cheffify' />
+        </Link>
+
         <div className='menu__links'>
           {URL_NAV.map((item, index) => (
             <span className='menu__links-contain' key={index}>
@@ -51,6 +59,7 @@ const Navbar = () => {
             iconRight='cart'
             iconColor={COLORS.white}
             sizeIcon={15}
+            onClickCesta={() => dispatch(showOrHideCesta())}
           />
         </div>
       </div>

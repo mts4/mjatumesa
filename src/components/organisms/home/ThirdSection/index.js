@@ -12,6 +12,7 @@ import { LIST_INFO } from '../../../../utils/const'
 import { COLORS } from '../../../../theme/css/global.colors'
 // Styles
 import Wrapper, { ItemsBox, Item } from './styles'
+import { Link } from 'react-router-dom'
 
 const ThirdSection = () => {
   return (
@@ -30,13 +31,15 @@ const ThirdSection = () => {
           </Item>
         ))}
       </ItemsBox>
-      <Button
-        iconLeft={IconStore}
-        text='Visitar tienda'
-        bgColor={COLORS.white}
-        color={COLORS.salmon}
-        iconLeftSize={27}
-      />
+      <Link to='/shop' className='link'>
+        <Button
+          iconLeft={IconStore}
+          text='Visitar tienda'
+          bgColor={COLORS.white}
+          color={COLORS.salmon}
+          iconLeftSize={27}
+        />
+      </Link>
       <ButtonCircleDown customStyle={{ marginTop: 40 }} />
       <img src={bgLeft} className='bgLeft' />
       <img src={bgRight} className='bgRight' />

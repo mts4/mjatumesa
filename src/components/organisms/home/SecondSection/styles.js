@@ -36,6 +36,10 @@ const Wrapper = styled.div`
       flex-direction: column;
     }
   }
+  .link {
+    width: 100%;
+    max-width: 240px;
+  }
   .bgLeft {
     position: absolute;
     top: 40px;

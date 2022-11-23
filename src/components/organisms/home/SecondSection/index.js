@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import ProductCard from '../../products/productCard'
 import TitleSection from '../../../molecules/TitleSection'
 import ArrowScrollDown from '../../../molecules/ArrowScrollDown'
@@ -27,14 +28,17 @@ const SecondSection = () => {
             <ProductCard key={product.id} data={product} />
           ))}
       </div>
-      <Button
-        text='Más platos'
-        fontSize={17}
-        color={COLORS.white}
-        bgColor={COLORS.violetDark}
-        width={240}
-        borderColor={COLORS.violetDark}
-      />
+
+      <Link to='/shop' className='link'>
+        <Button
+          text='Más platos'
+          fontSize={17}
+          color={COLORS.white}
+          bgColor={COLORS.violetDark}
+          width={240}
+          borderColor={COLORS.violetDark}
+        />
+      </Link>
       <img src={bgLeft} className='bgLeft' />
       <img src={bgRight} className='bgRight' />
     </Wrapper>

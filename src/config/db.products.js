@@ -11,7 +11,7 @@ export const PRODUCTS = [
   },
   {
     id: 2,
-    title: 'Charquican',
+    title: 'Arroz',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
@@ -19,7 +19,7 @@ export const PRODUCTS = [
   },
   {
     id: 3,
-    title: 'Charquican',
+    title: 'Porotos',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,
@@ -27,7 +27,7 @@ export const PRODUCTS = [
   },
   {
     id: 4,
-    title: 'Charquican',
+    title: 'Ensalada',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
     price: 3550,

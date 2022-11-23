@@ -6,6 +6,7 @@ import TopSectionImage from '../../../../assets/images/svg/img/top-section-image
 import { COLORS } from '../../../../theme/css/global.colors'
 // Styles
 import Wrapper from './styles'
+import { Link } from 'react-router-dom'
 const TopSection = () => {
   return (
     <Wrapper>
@@ -22,15 +23,17 @@ const TopSection = () => {
           <img src={EmoteLove} alt='Icono emote Love' className='icon' />
         </p>
         <div className='blockLeft__buttons'>
-          <Button
-            text='Hacer pedido'
-            fontSize={17}
-            color={COLORS.white}
-            bgColor={COLORS.salmon}
-            width={240}
-            borderColor={COLORS.salmon}
-            margin={5}
-          />
+          <Link to='/shop'>
+            <Button
+              text='Hacer pedido'
+              fontSize={17}
+              color={COLORS.white}
+              bgColor={COLORS.salmon}
+              width={240}
+              borderColor={COLORS.salmon}
+              margin={5}
+            />
+          </Link>
           <Button
             text='Saber más'
             fontSize={17}
