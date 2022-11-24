@@ -10,7 +10,6 @@ import Wrapper from './styles'
 
 const Filter = () => {
   const [inputRange, setInputRange] = useState([])
-  console.log(inputRange)
   return (
     <Wrapper>
       <div className='title'>

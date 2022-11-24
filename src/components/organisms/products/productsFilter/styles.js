@@ -16,18 +16,22 @@ const Wrapper = styled.div`
     &__left {
       display: flex;
       align-items: center;
+      width: 100%;
       h5 {
         font-size: 19px;
         color: ${COLORS.violetDark};
       }
     }
     &__right {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
       &-select {
         border: none;
         background-color: ${COLORS.lightGrayBorderProduct};
         border-radius: 17px;
         width: 100%;
-        max-width: 150px;
+        max-width: 200px;
         height: 34px;
         font-size: 12px;
         color: ${COLORS.violetDark};

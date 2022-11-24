@@ -1,12 +1,20 @@
+import { useState } from 'react'
 // Products
-import { PRODUCTS } from '../../../../config/db.products'
 import ProductCard from '../productCard'
+// Utils
+import { PRODUCTS } from '../../../../config/db.products'
+import { orderProducts } from '../../../../utils/functions'
 // Icons
 import Icon from 'cheffify-react-icons'
 // Styles
 import Wrapper from './styles'
 
 const ProductsFilter = () => {
+  const [dataProduct, setDataProduct] = useState(PRODUCTS)
+
+  const handleChangeSelect = order =>
+    setDataProduct(orderProducts(PRODUCTS, order))
+
   return (
     <Wrapper>
       <div className='header'>
@@ -15,7 +23,12 @@ const ProductsFilter = () => {
           <h5>Nuestra Carta</h5>
         </div>
         <div className='header__right'>
-          <select name='' id='' className='header__right-select'>
+          <select
+            name=''
+            id=''
+            className='header__right-select'
+            onChange={order => handleChangeSelect(order.target.value)}
+          >
             <option value=''>Ordenar por</option>
             <option value='asc'>Precio (de bajo a alto)</option>
             <option value='desc'>Precio (de alto a bajo)</option>
@@ -23,8 +36,8 @@ const ProductsFilter = () => {
         </div>
       </div>
       <div className='body'>
-        {PRODUCTS &&
-          PRODUCTS.map(product => (
+        {dataProduct &&
+          dataProduct.map(product => (
             <ProductCard key={product.id} data={product} />
           ))}
       </div>

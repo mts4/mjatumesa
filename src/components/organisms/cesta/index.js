@@ -7,10 +7,7 @@ import { totalPriceCesta } from '../../../utils/functions'
 import Wrapper from './styles'
 
 const Cesta = () => {
-  // const dispatch = useDispatch()
-
   const dataCesta = useSelector(state => state.products.dataCesta)
-
   return (
     <Wrapper>
       <h5 className='title'>Mi Cesta</h5>
