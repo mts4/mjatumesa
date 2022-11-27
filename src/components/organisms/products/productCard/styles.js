@@ -59,6 +59,7 @@ const Card = styled.div`
       &-title {
         font-size: 18px;
         color: ${COLORS.violetLight};
+        min-height: 42px;
       }
       &-description {
         color: ${COLORS.grey};

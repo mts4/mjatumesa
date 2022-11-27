@@ -243,7 +243,7 @@ export const PRODUCTS = [
     image: PicanteCamaron,
   },
   {
-    id: 22,
+    id: 23,
     title: 'Croquetas de Atún',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -252,7 +252,7 @@ export const PRODUCTS = [
     image: CroquetasAtun,
   },
   {
-    id: 23,
+    id: 24,
     title: 'Pastelera',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -261,7 +261,7 @@ export const PRODUCTS = [
     image: Pastelera,
   },
   {
-    id: 24,
+    id: 25,
     title: 'Guiso Zapallito',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -270,7 +270,7 @@ export const PRODUCTS = [
     image: GuisoZapallito,
   },
   {
-    id: 25,
+    id: 26,
     title: 'Arroz Pimentón',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -279,7 +279,7 @@ export const PRODUCTS = [
     image: ArrozPimenton,
   },
   {
-    id: 26,
+    id: 27,
     title: 'Arroz Cilantro',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -288,7 +288,7 @@ export const PRODUCTS = [
     image: ArrozCilantro,
   },
   {
-    id: 27,
+    id: 28,
     title: 'Arroz Blanco',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -297,7 +297,7 @@ export const PRODUCTS = [
     image: ArrozBlanco,
   },
   {
-    id: 28,
+    id: 29,
     title: 'Pastel de Choclo con Pollo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -306,7 +306,7 @@ export const PRODUCTS = [
     image: PastelChocloPollo,
   },
   {
-    id: 29,
+    id: 30,
     title: 'Pastel de Choclo con Carne picada',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -315,7 +315,7 @@ export const PRODUCTS = [
     image: PastelChocloCarne,
   },
   {
-    id: 30,
+    id: 31,
     title: 'Porotos Granados',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -324,7 +324,7 @@ export const PRODUCTS = [
     image: PorotosGranados,
   },
   {
-    id: 31,
+    id: 32,
     title: 'Tallarines Bontu',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -333,7 +333,7 @@ export const PRODUCTS = [
     image: TallarinesBontu,
   },
   {
-    id: 32,
+    id: 33,
     title: 'Quiche Jamón - Queso',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -342,7 +342,7 @@ export const PRODUCTS = [
     image: QuicheJamonQueso,
   },
   {
-    id: 33,
+    id: 34,
     title: 'Quiche Atún - Verduras',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -351,7 +351,7 @@ export const PRODUCTS = [
     image: QuicheAtunVerduras,
   },
   {
-    id: 34,
+    id: 35,
     title: 'Lasaña Boloñesa Posta Picada',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -360,7 +360,7 @@ export const PRODUCTS = [
     image: LasanaBolognesaPostaPicada,
   },
   {
-    id: 35,
+    id: 36,
     title: 'Lasaña Pollo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -369,7 +369,7 @@ export const PRODUCTS = [
     image: LasanaPollo,
   },
   {
-    id: 36,
+    id: 37,
     title: 'Tallarines con Pesto',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -378,7 +378,7 @@ export const PRODUCTS = [
     image: TallarinesPesto,
   },
   {
-    id: 37,
+    id: 38,
     title: 'Pie de Limón',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -387,7 +387,7 @@ export const PRODUCTS = [
     image: PieLimon,
   },
   {
-    id: 38,
+    id: 39,
     title: 'Tres Leches',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -396,7 +396,7 @@ export const PRODUCTS = [
     image: TresLeches,
   },
   {
-    id: 39,
+    id: 40,
     title: 'Flan Dulce de Leche',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -405,7 +405,7 @@ export const PRODUCTS = [
     image: Flan,
   },
   {
-    id: 40,
+    id: 41,
     title: 'Repollitos Manjar - Pastelera',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -414,7 +414,7 @@ export const PRODUCTS = [
     image: RepollitosManjar,
   },
   {
-    id: 41,
+    id: 42,
     title: 'Torta de hojarasca - manjar de leche condensada',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -423,7 +423,7 @@ export const PRODUCTS = [
     image: TortaHojarasca,
   },
   {
-    id: 42,
+    id: 43,
     title: 'Panqueques de Pollo - Verdura',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -432,7 +432,7 @@ export const PRODUCTS = [
     image: PanquequesPolloVerdura,
   },
   {
-    id: 42,
+    id: 44,
     title: 'Panqueques de Pollo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
@@ -441,7 +441,7 @@ export const PRODUCTS = [
     image: PanquequesPollo,
   },
   {
-    id: 43,
+    id: 45,
     title: 'Guiso de Zapallo Italiano - Posta Picada',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',

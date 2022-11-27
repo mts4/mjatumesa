@@ -11,9 +11,14 @@ import Wrapper from './styles'
 
 const ProductsFilter = () => {
   const [dataProduct, setDataProduct] = useState(PRODUCTS)
+  const [offSet, setOffSet] = useState(6)
 
   const handleChangeSelect = order =>
     setDataProduct(orderProducts(PRODUCTS, order))
+
+  const handleClickLoadMore = () => {
+    setOffSet(offSet + offSet)
+  }
 
   return (
     <Wrapper>
@@ -37,9 +42,12 @@ const ProductsFilter = () => {
       </div>
       <div className='body'>
         {dataProduct &&
-          dataProduct.map(product => (
-            <ProductCard key={product.id} data={product} />
-          ))}
+          dataProduct
+            .slice(0, offSet)
+            .map(product => <ProductCard key={product.id} data={product} />)}
+      </div>
+      <div className='loadMore'>
+        <button onClick={handleClickLoadMore}>Cargar Más</button>
       </div>
     </Wrapper>
   )
