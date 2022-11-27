@@ -58,5 +58,35 @@ const Wrapper = styled.div`
       margin-right: 0px;
     }
   }
+  .loadMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+      background-color: ${COLORS.white};
+      border: 1px solid ${COLORS.violetDark};
+      border-radius: 31px;
+      padding: 25px;
+      width: 100%;
+      max-width: 259px;
+      height: 100%;
+      max-height: 60px;
+      cursor: pointer;
+      &-text {
+        font-size: 22px;
+        color: ${COLORS.violetDark};
+        font-family: 'Raleway';
+        font-weight: 600;
+      }
+      &-icon {
+        font-style: normal;
+        font-size: 30px;
+      }
+    }
+  }
 `
 export default Wrapper

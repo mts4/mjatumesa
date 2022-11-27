@@ -16,9 +16,7 @@ const ProductsFilter = () => {
   const handleChangeSelect = order =>
     setDataProduct(orderProducts(PRODUCTS, order))
 
-  const handleClickLoadMore = () => {
-    setOffSet(offSet + offSet)
-  }
+  const handleClickLoadMore = () => setOffSet(offSet + offSet)
 
   return (
     <Wrapper>
@@ -47,7 +45,10 @@ const ProductsFilter = () => {
             .map(product => <ProductCard key={product.id} data={product} />)}
       </div>
       <div className='loadMore'>
-        <button onClick={handleClickLoadMore}>Cargar Más</button>
+        <button onClick={handleClickLoadMore} className='loadMore__btn'>
+          <span className='loadMore__btn-text'>Cargar Más</span>
+          <i className='loadMore__btn-icon'>+</i>
+        </button>
       </div>
     </Wrapper>
   )
