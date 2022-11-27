@@ -31,6 +31,7 @@ const Wrapper = styled.div`
     h5 {
       ${title};
       font-size: 19px;
+      margin-left: 10px;
     }
   }
   .category {
@@ -59,6 +60,7 @@ const Wrapper = styled.div`
         font-size: 15px;
         font-weight: normal;
         font-family: 'Raleway', sans-serif;
+        margin-left: 5px;
       }
     }
     &__price {

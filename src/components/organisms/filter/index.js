@@ -2,7 +2,7 @@ import { useState } from 'react'
 // Input Range
 import Slider from 'rc-slider'
 // Icons
-import Icon from 'cheffify-react-icons'
+import Icon from '../../molecules/Icon'
 // Utils
 import { formatPriceCLP } from '../../../utils/formats'
 // Styles
@@ -13,31 +13,31 @@ const Filter = () => {
   return (
     <Wrapper>
       <div className='title'>
-        <Icon name='angle-down' size={20} color='#262C57' />
+        <Icon name='icon-filter' width={20} height={20} />
         <h5>Filtrar</h5>
       </div>
       <div className='category'>
         <div className='category__title'>
           <h5>Categoría</h5>
-          <Icon name='angle-down' size={15} color='#262C57' />
+          <Icon name='arrow-down' width={20} height={20} />
         </div>
         <div className='category__buttons'>
-          <Icon name='angle-down' size={15} color='#D77466' />
+          <Icon name='icon-meat' width={20} height={20} />
           <button>Carnes Rojas</button>
         </div>
         <div className='category__buttons'>
-          <Icon name='angle-down' size={15} color='#D77466' />
+          <Icon name='icon-cooking-pot' width={20} height={20} />
           <button>Guisos</button>
         </div>
         <div className='category__buttons'>
-          <Icon name='angle-down' size={15} color='#D77466' />
+          <Icon name='icon-fish' width={20} height={20} />
           <button>Carnes Blancas</button>
         </div>
       </div>
       <div className='category'>
         <div className='category__title'>
           <h5>Precio</h5>
-          <Icon name='angle-down' size={15} color='#262C57' />
+          <Icon name='arrow-down' width={20} height={20} />
         </div>
         <div className='category__price'>
           <Slider
@@ -63,7 +63,7 @@ const Filter = () => {
       <div className='category'>
         <div className='category__title'>
           <h5>Formato</h5>
-          <Icon name='angle-down' size={15} color='#262C57' />
+          <Icon name='arrow-down' width={20} height={20} />
         </div>
         <div className='category__checkbox'>
           <input

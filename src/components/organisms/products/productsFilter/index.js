@@ -5,7 +5,7 @@ import ProductCard from '../productCard'
 import { PRODUCTS } from '../../../../config/db.products'
 import { orderProducts } from '../../../../utils/functions'
 // Icons
-import Icon from 'cheffify-react-icons'
+import Icon from '../../../molecules/Icon'
 // Styles
 import Wrapper from './styles'
 
@@ -19,7 +19,7 @@ const ProductsFilter = () => {
     <Wrapper>
       <div className='header'>
         <div className='header__left'>
-          <Icon name='angle-down' size={20} color='#262C57' />
+          <Icon name='icon-carta' width={20} height={20} />
           <h5>Nuestra Carta</h5>
         </div>
         <div className='header__right'>

@@ -20,6 +20,7 @@ const Wrapper = styled.div`
       h5 {
         font-size: 19px;
         color: ${COLORS.violetDark};
+        margin-left: 10px;
       }
     }
     &__right {
