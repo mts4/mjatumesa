@@ -49,7 +49,7 @@ export const PRODUCTS = [
     title: 'Panqueques para rellenar',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3100,
     image: Pancakes,
   },
@@ -58,7 +58,7 @@ export const PRODUCTS = [
     title: 'Crema de Zapallo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3550,
     image: CremaZapallo,
   },
@@ -67,7 +67,7 @@ export const PRODUCTS = [
     title: 'Arroz Chaufan',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Rojas'],
+    category: 'Carnes Rojas',
     price: 3550,
     image: ArrozChaufan,
   },
@@ -76,7 +76,7 @@ export const PRODUCTS = [
     title: 'Pollo Asado con Arroz',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Blancas'],
+    category: 'Carnes Blancas',
     price: 5200,
     image: PolloAsado,
   },
@@ -85,7 +85,7 @@ export const PRODUCTS = [
     title: 'Pie de Pollo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: PiePollo,
   },
@@ -94,7 +94,7 @@ export const PRODUCTS = [
     title: 'Lasaña Pollo Espinaca',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: LasanaPolloEspinaca,
   },
@@ -103,7 +103,7 @@ export const PRODUCTS = [
     title: 'Quiche de pollo pimentón',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3550,
     image: QuichePollo,
   },
@@ -112,7 +112,7 @@ export const PRODUCTS = [
     title: 'Tallarines de panqueques con pollo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: TallarinesPancakes,
   },
@@ -121,7 +121,7 @@ export const PRODUCTS = [
     title: 'Gratín de papas',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3550,
     image: GratinPapas,
   },
@@ -130,7 +130,7 @@ export const PRODUCTS = [
     title: 'Pollo con tocino',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Blancas'],
+    category: 'Carnes Blancas',
     price: 3550,
     image: PolloTocino,
   },
@@ -139,7 +139,7 @@ export const PRODUCTS = [
     title: 'Lentejas',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3450,
     image: PolloTocino,
   },
@@ -148,7 +148,7 @@ export const PRODUCTS = [
     title: 'Lasaña Berenjenas',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: LasanaBerenjenas,
   },
@@ -157,7 +157,7 @@ export const PRODUCTS = [
     title: 'Charquican',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3550,
     image: Charquican,
   },
@@ -166,7 +166,7 @@ export const PRODUCTS = [
     title: 'Asado aleman con salsa mostaza',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Rojas'],
+    category: 'Carnes Rojas',
     price: 3950,
     image: AsadoAleman,
   },
@@ -175,7 +175,7 @@ export const PRODUCTS = [
     title: 'Pure de papas',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 2100,
     image: PurePapas,
   },
@@ -184,7 +184,7 @@ export const PRODUCTS = [
     title: 'Lomo de cerdo acaramelado',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Blancas'],
+    category: 'Carnes Blancas',
     price: 3950,
     image: LomoCerdo,
   },
@@ -193,7 +193,7 @@ export const PRODUCTS = [
     title: 'Strogonoff de Pollo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Blancas'],
+    category: 'Carnes Blancas',
     price: 3950,
     image: StrogonoffPollo,
   },
@@ -202,7 +202,7 @@ export const PRODUCTS = [
     title: 'Albóndigas de Carne',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Rojas'],
+    category: 'Carnes Rojas',
     price: 3950,
     image: AlbondigasCarne,
   },
@@ -211,7 +211,7 @@ export const PRODUCTS = [
     title: 'Ganso a la Olla',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Rojas'],
+    category: 'Carnes Rojas',
     price: 3950,
     image: GansoOlla,
   },
@@ -220,7 +220,7 @@ export const PRODUCTS = [
     title: 'Tomaticán',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Rojas'],
+    category: 'Carnes Rojas',
     price: 3950,
     image: Tomatican,
   },
@@ -229,7 +229,7 @@ export const PRODUCTS = [
     title: 'Strogonoff de Carne',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Carnes Rojas'],
+    category: 'Carnes Rojas',
     price: 3950,
     image: StrogonoffCarne,
   },
@@ -238,7 +238,7 @@ export const PRODUCTS = [
     title: 'Picante de Camarón',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 7500,
     image: PicanteCamaron,
   },
@@ -247,7 +247,7 @@ export const PRODUCTS = [
     title: 'Croquetas de Atún',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: CroquetasAtun,
   },
@@ -256,7 +256,7 @@ export const PRODUCTS = [
     title: 'Pastelera',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 2950,
     image: Pastelera,
   },
@@ -265,7 +265,7 @@ export const PRODUCTS = [
     title: 'Guiso Zapallito',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: GuisoZapallito,
   },
@@ -274,7 +274,7 @@ export const PRODUCTS = [
     title: 'Arroz Pimentón',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 1950,
     image: ArrozPimenton,
   },
@@ -283,7 +283,7 @@ export const PRODUCTS = [
     title: 'Arroz Cilantro',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 1950,
     image: ArrozCilantro,
   },
@@ -292,7 +292,7 @@ export const PRODUCTS = [
     title: 'Arroz Blanco',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 1950,
     image: ArrozBlanco,
   },
@@ -301,7 +301,7 @@ export const PRODUCTS = [
     title: 'Pastel de Choclo con Pollo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3550,
     image: PastelChocloPollo,
   },
@@ -310,7 +310,7 @@ export const PRODUCTS = [
     title: 'Pastel de Choclo con Carne picada',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3550,
     image: PastelChocloCarne,
   },
@@ -319,7 +319,7 @@ export const PRODUCTS = [
     title: 'Porotos Granados',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3450,
     image: PorotosGranados,
   },
@@ -328,7 +328,7 @@ export const PRODUCTS = [
     title: 'Tallarines Bontu',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: TallarinesBontu,
   },
@@ -337,7 +337,7 @@ export const PRODUCTS = [
     title: 'Quiche Jamón - Queso',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: QuicheJamonQueso,
   },
@@ -346,7 +346,7 @@ export const PRODUCTS = [
     title: 'Quiche Atún - Verduras',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: QuicheAtunVerduras,
   },
@@ -355,7 +355,7 @@ export const PRODUCTS = [
     title: 'Lasaña Boloñesa Posta Picada',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: LasanaBolognesaPostaPicada,
   },
@@ -364,7 +364,7 @@ export const PRODUCTS = [
     title: 'Lasaña Pollo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: LasanaPollo,
   },
@@ -373,7 +373,7 @@ export const PRODUCTS = [
     title: 'Tallarines con Pesto',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 3550,
     image: TallarinesPesto,
   },
@@ -382,7 +382,7 @@ export const PRODUCTS = [
     title: 'Pie de Limón',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 1800,
     image: PieLimon,
   },
@@ -391,7 +391,7 @@ export const PRODUCTS = [
     title: 'Tres Leches',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 1800,
     image: TresLeches,
   },
@@ -400,7 +400,7 @@ export const PRODUCTS = [
     title: 'Flan Dulce de Leche',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 1800,
     image: Flan,
   },
@@ -409,7 +409,7 @@ export const PRODUCTS = [
     title: 'Repollitos Manjar - Pastelera',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 1800,
     image: RepollitosManjar,
   },
@@ -418,7 +418,7 @@ export const PRODUCTS = [
     title: 'Torta de hojarasca - manjar de leche condensada',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: [],
+    category: '',
     price: 25550,
     image: TortaHojarasca,
   },
@@ -427,7 +427,7 @@ export const PRODUCTS = [
     title: 'Panqueques de Pollo - Verdura',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3550,
     image: PanquequesPolloVerdura,
   },
@@ -436,7 +436,7 @@ export const PRODUCTS = [
     title: 'Panqueques de Pollo',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3550,
     image: PanquequesPollo,
   },
@@ -445,7 +445,7 @@ export const PRODUCTS = [
     title: 'Guiso de Zapallo Italiano - Posta Picada',
     description:
       'Exquisito Guiso de charqui con porotos, papas, zapallo y otras legumbres.',
-    category: ['Guisos'],
+    category: 'Guisos',
     price: 3950,
     image: GuisoDeZapalloItalianoPostaPicada,
   },

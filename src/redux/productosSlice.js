@@ -1,6 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
+// Utils
+import { orderProducts } from '../utils/functions'
+import { PRODUCTS } from '../config/db.products'
 
 const initialState = {
+  dataProducts: [],
+  isVisibleBtnLoadMore: true,
   isVisibleCesta: false,
   dataCesta: [],
 }
@@ -9,6 +14,32 @@ export const productosSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
+    loadAllProducts: (state, action) => {
+      const offset = action.payload
+      if (PRODUCTS.length > state.dataProducts.length) {
+        state.dataProducts = PRODUCTS.slice(0, offset)
+      }
+      if (PRODUCTS.length === state.dataProducts.length) {
+        state.isVisibleBtnLoadMore = false
+      }
+    },
+    filterProductsByCategory: (state, action) => {
+      const category = action.payload
+      const productsFiltered = PRODUCTS.filter(
+        product => product.category === category
+      )
+      state.dataProducts = productsFiltered
+      state.isVisibleBtnLoadMore = false
+    },
+    filterProductsByPrice: (state, action) => {
+      const rangePrice = action.payload
+      const productsFiltered = PRODUCTS.filter(
+        product =>
+          (product.price >= rangePrice[0]) & (product.price <= rangePrice[1])
+      )
+      state.dataProducts = productsFiltered
+      state.isVisibleBtnLoadMore = false
+    },
     showOrHideCesta: state => {
       state.isVisibleCesta = !state.isVisibleCesta
     },
@@ -34,10 +65,29 @@ export const productosSlice = createSlice({
     removeProduct: (state, action) => {
       state.dataCesta = action.payload
     },
+    orderByAscOrDesc: (state, action) => {
+      const order = action.payload
+      const dataProducts = state.dataProducts
+      const productsOrdened = orderProducts({ dataProducts, order, PRODUCTS })
+      state.dataProducts = productsOrdened
+    },
+    resetProducts: state => {
+      state.dataProducts = PRODUCTS
+      state.isVisibleCesta = false
+      state.dataCesta = []
+    },
   },
 })
 
-export const { showOrHideCesta, addProduct, removeProduct } =
-  productosSlice.actions
+export const {
+  loadAllProducts,
+  filterProductsByCategory,
+  filterProductsByPrice,
+  showOrHideCesta,
+  addProduct,
+  removeProduct,
+  orderByAscOrDesc,
+  resetProducts,
+} = productosSlice.actions
 
 export default productosSlice.reducer

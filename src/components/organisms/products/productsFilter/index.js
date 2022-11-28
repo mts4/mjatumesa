@@ -1,22 +1,43 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+// Redux
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  loadAllProducts,
+  orderByAscOrDesc,
+  resetProducts,
+} from '../../../../redux/productosSlice'
 // Products
 import ProductCard from '../productCard'
-// Utils
-import { PRODUCTS } from '../../../../config/db.products'
-import { orderProducts } from '../../../../utils/functions'
 // Icons
 import Icon from '../../../molecules/Icon'
 // Styles
 import Wrapper from './styles'
 
 const ProductsFilter = () => {
-  const [dataProduct, setDataProduct] = useState(PRODUCTS)
+  const dispatch = useDispatch()
   const [offSet, setOffSet] = useState(6)
 
-  const handleChangeSelect = order =>
-    setDataProduct(orderProducts(PRODUCTS, order))
+  const dataProducts = useSelector(state => state.products.dataProducts)
+  const isVisibleBtnLoadMore = useSelector(
+    state => state.products.isVisibleBtnLoadMore
+  )
 
-  const handleClickLoadMore = () => setOffSet(offSet + offSet)
+  const handleChangeSelect = order => dispatch(orderByAscOrDesc(order))
+  const handleClickLoadMore = () => {
+    setOffSet(offSet + offSet)
+  }
+
+  useEffect(() => {
+    dispatch(loadAllProducts(offSet))
+    return () => {
+      dispatch(resetProducts())
+      setOffSet(6)
+    }
+  }, [])
+
+  useEffect(() => {
+    dispatch(loadAllProducts(offSet))
+  }, [offSet])
 
   return (
     <Wrapper>
@@ -39,17 +60,19 @@ const ProductsFilter = () => {
         </div>
       </div>
       <div className='body'>
-        {dataProduct &&
-          dataProduct
-            .slice(0, offSet)
-            .map(product => <ProductCard key={product.id} data={product} />)}
+        {dataProducts &&
+          dataProducts.map((product, index) => (
+            <ProductCard key={index} data={product} />
+          ))}
       </div>
-      <div className='loadMore'>
-        <button onClick={handleClickLoadMore} className='loadMore__btn'>
-          <span className='loadMore__btn-text'>Cargar Más</span>
-          <i className='loadMore__btn-icon'>+</i>
-        </button>
-      </div>
+      {isVisibleBtnLoadMore === true && (
+        <div className='loadMore'>
+          <button onClick={handleClickLoadMore} className='loadMore__btn'>
+            <span className='loadMore__btn-text'>Cargar Más</span>
+            <i className='loadMore__btn-icon'>+</i>
+          </button>
+        </div>
+      )}
     </Wrapper>
   )
 }

@@ -4,12 +4,12 @@ export const totalPriceCesta = cesta => {
   return total
 }
 
-export const orderProducts = (products, order) => {
+export const orderProducts = ({ dataProducts, order, PRODUCTS }) => {
   // If empty order return normal array
   if (order === '') {
-    return [...products]
+    return [...PRODUCTS]
   } else {
-    return [...products].sort((productA, productB) =>
+    return [...dataProducts].sort((productA, productB) =>
       order === 'asc'
         ? productA.price - productB.price
         : productB.price - productA.price

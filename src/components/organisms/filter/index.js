@@ -1,4 +1,10 @@
 import { useState } from 'react'
+// Redux
+import { useDispatch } from 'react-redux'
+import {
+  filterProductsByCategory,
+  filterProductsByPrice,
+} from '../../../redux/productosSlice'
 // Input Range
 import Slider from 'rc-slider'
 // Icons
@@ -9,7 +15,17 @@ import { formatPriceCLP } from '../../../utils/formats'
 import Wrapper from './styles'
 
 const Filter = () => {
+  const dispatch = useDispatch()
   const [inputRange, setInputRange] = useState([])
+
+  const handleClickFilterByCategory = category =>
+    dispatch(filterProductsByCategory(category))
+
+  const handleChangeFilterByPrice = price => {
+    setInputRange(price)
+    dispatch(filterProductsByPrice(price))
+  }
+
   return (
     <Wrapper>
       <div className='title'>
@@ -21,15 +37,24 @@ const Filter = () => {
           <h5>Categoría</h5>
           <Icon name='arrow-down' width={20} height={20} />
         </div>
-        <div className='category__buttons'>
+        <div
+          className='category__buttons'
+          onClick={() => handleClickFilterByCategory('Carnes Rojas')}
+        >
           <Icon name='icon-meat' width={20} height={20} />
           <button>Carnes Rojas</button>
         </div>
-        <div className='category__buttons'>
+        <div
+          className='category__buttons'
+          onClick={() => handleClickFilterByCategory('Guisos')}
+        >
           <Icon name='icon-cooking-pot' width={20} height={20} />
           <button>Guisos</button>
         </div>
-        <div className='category__buttons'>
+        <div
+          className='category__buttons'
+          onClick={() => handleClickFilterByCategory('Carnes Blancas')}
+        >
           <Icon name='icon-fish' width={20} height={20} />
           <button>Carnes Blancas</button>
         </div>
@@ -43,10 +68,10 @@ const Filter = () => {
           <Slider
             range
             allowCross={false}
-            defaultValue={[1801, 25499]}
-            onChange={price => setInputRange(price)}
+            defaultValue={[1801, 25549]}
+            onChange={price => handleChangeFilterByPrice(price)}
             min={1800}
-            max={25500}
+            max={25550}
           />
           <div className='category__price-span'>
             <span>

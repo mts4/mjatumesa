@@ -61,6 +61,7 @@ const Wrapper = styled.div`
         font-weight: normal;
         font-family: 'Raleway', sans-serif;
         margin-left: 5px;
+        cursor: pointer;
       }
     }
     &__price {
