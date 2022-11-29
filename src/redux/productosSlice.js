@@ -80,7 +80,13 @@ export const productosSlice = createSlice({
       state.dataProducts = PRODUCTS.slice(0, 6)
       state.isVisibleBtnLoadMore = true
       state.isVisibleCesta = false
-      state.dataCesta = []
+    },
+    removeProductByNameInCesta: (state, action) => {
+      const nameToRemove = action.payload
+      const filterProducts = state.dataCesta.filter(
+        product => product.title !== nameToRemove
+      )
+      state.dataCesta = filterProducts
     },
   },
 })
@@ -94,6 +100,7 @@ export const {
   removeProduct,
   orderByAscOrDesc,
   resetProducts,
+  removeProductByNameInCesta,
 } = productosSlice.actions
 
 export default productosSlice.reducer

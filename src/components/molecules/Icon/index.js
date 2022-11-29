@@ -1,4 +1,10 @@
-const Icon = ({ name = 'icon-fish', width = 20, height = 20, customStyle }) => {
+const Icon = ({
+  name = 'icon-fish',
+  width = 20,
+  height = 20,
+  customStyle,
+  onClickIcon,
+}) => {
   const image = require(`../../../assets/images/svg/icons/${name}.svg`)
   return (
     <img
@@ -6,6 +12,7 @@ const Icon = ({ name = 'icon-fish', width = 20, height = 20, customStyle }) => {
       width={width}
       height={height}
       style={customStyle && customStyle}
+      onClick={onClickIcon && onClickIcon()}
     />
   )
 }

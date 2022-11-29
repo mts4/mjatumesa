@@ -27,6 +27,8 @@ const Wrapper = styled.div`
       &__image {
         display: flex;
         margin-right: 5px;
+        width: 100%;
+        max-width: 156px;
         &-img {
           width: 45px;
           height: 45px;
@@ -44,6 +46,15 @@ const Wrapper = styled.div`
         &-quantity {
           color: ${COLORS.salmon};
           font-size: 10px;
+        }
+      }
+      &__delete {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          background-color: transparent;
+          border: none;
         }
       }
       &__controls {
@@ -127,6 +138,15 @@ const Wrapper = styled.div`
       font-size: 8px;
       font-style: italic;
       margin-top: 7px;
+    }
+  }
+  .notHaveProducts {
+    display: flex;
+    justify-content: center;
+    p {
+      text-align: center;
+      font-size: 18px;
+      color: ${COLORS.violetDark};
     }
   }
 `
