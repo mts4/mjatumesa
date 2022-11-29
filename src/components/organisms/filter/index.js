@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 // Redux
 import { useDispatch } from 'react-redux'
-import { filterProducts, resetProducts } from '../../../redux/productosSlice'
+import {
+  filterProductsByCategory,
+  resetProducts,
+  filterProductsByPrice,
+} from '../../../redux/productosSlice'
 // Input Range
 import Slider from 'rc-slider'
 // Icons
@@ -29,6 +33,7 @@ const Filter = () => {
       setFiltersActive({
         ...filtersActive,
         category: '',
+        price: [1800, 25500],
       })
       dispatch(resetProducts())
     }
@@ -39,11 +44,11 @@ const Filter = () => {
       ...filtersActive,
       price,
     })
-    // dispatch(filterProducts(price))
+    dispatch(filterProductsByPrice(filtersActive))
   }
 
   useEffect(() => {
-    filtersActive.category && dispatch(filterProducts(filtersActive))
+    filtersActive.category && dispatch(filterProductsByCategory(filtersActive))
   }, [filtersActive])
 
   return (
@@ -132,22 +137,15 @@ const Filter = () => {
           <Slider
             range
             allowCross={false}
-            defaultValue={[1801, 25549]}
+            defaultValue={[1800, 25550]}
+            value={[filtersActive.price[0], filtersActive.price[1]]}
             onChange={price => handleChangeFilterByPrice(price)}
             min={1800}
             max={25550}
           />
           <div className='category__price-span'>
-            <span>
-              {filtersActive.price.length > 0
-                ? formatPriceCLP(filtersActive.price[0])
-                : '$1.800'}
-            </span>
-            <span>
-              {filtersActive.price.length > 0
-                ? formatPriceCLP(filtersActive.price[1])
-                : '$25.500'}
-            </span>
+            <span>{formatPriceCLP(filtersActive.price[0])}</span>
+            <span>{formatPriceCLP(filtersActive.price[1])}</span>
           </div>
         </div>
       </div>
