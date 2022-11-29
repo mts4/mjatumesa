@@ -1,10 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 // Redux
 import { useDispatch } from 'react-redux'
-import {
-  filterProductsByCategory,
-  filterProductsByPrice,
-} from '../../../redux/productosSlice'
+import { filterProducts, resetProducts } from '../../../redux/productosSlice'
 // Input Range
 import Slider from 'rc-slider'
 // Icons
@@ -16,15 +13,38 @@ import Wrapper from './styles'
 
 const Filter = () => {
   const dispatch = useDispatch()
-  const [inputRange, setInputRange] = useState([])
+  const [filtersActive, setFiltersActive] = useState({
+    category: '',
+    price: [1800, 25500],
+    format: [],
+  })
 
-  const handleClickFilterByCategory = category =>
-    dispatch(filterProductsByCategory(category))
+  const handleClickFilterByCategory = category => {
+    if (filtersActive.category !== category) {
+      setFiltersActive({
+        ...filtersActive,
+        category,
+      })
+    } else {
+      setFiltersActive({
+        ...filtersActive,
+        category: '',
+      })
+      dispatch(resetProducts())
+    }
+  }
 
   const handleChangeFilterByPrice = price => {
-    setInputRange(price)
-    dispatch(filterProductsByPrice(price))
+    setFiltersActive({
+      ...filtersActive,
+      price,
+    })
+    // dispatch(filterProducts(price))
   }
+
+  useEffect(() => {
+    filtersActive.category && dispatch(filterProducts(filtersActive))
+  }, [filtersActive])
 
   return (
     <Wrapper>
@@ -42,21 +62,65 @@ const Filter = () => {
           onClick={() => handleClickFilterByCategory('Carnes Rojas')}
         >
           <Icon name='icon-meat' width={20} height={20} />
-          <button>Carnes Rojas</button>
+          <button
+            className={
+              filtersActive.category === 'Carnes Rojas' ? 'active' : 'inactive'
+            }
+          >
+            Carnes Rojas
+          </button>
+          {filtersActive.category === 'Carnes Rojas' && (
+            <Icon
+              name='check'
+              width={20}
+              height={20}
+              customStyle={{ position: 'absolute', right: 0 }}
+            />
+          )}
         </div>
         <div
           className='category__buttons'
           onClick={() => handleClickFilterByCategory('Guisos')}
         >
           <Icon name='icon-cooking-pot' width={20} height={20} />
-          <button>Guisos</button>
+          <button
+            className={
+              filtersActive.category === 'Guisos' ? 'active' : 'inactive'
+            }
+          >
+            Guisos
+          </button>
+          {filtersActive.category === 'Guisos' && (
+            <Icon
+              name='check'
+              width={20}
+              height={20}
+              customStyle={{ position: 'absolute', right: 0 }}
+            />
+          )}
         </div>
         <div
           className='category__buttons'
           onClick={() => handleClickFilterByCategory('Carnes Blancas')}
         >
           <Icon name='icon-fish' width={20} height={20} />
-          <button>Carnes Blancas</button>
+          <button
+            className={
+              filtersActive.category === 'Carnes Blancas'
+                ? 'active'
+                : 'inactive'
+            }
+          >
+            Carnes Blancas
+          </button>
+          {filtersActive.category === 'Carnes Blancas' && (
+            <Icon
+              name='check'
+              width={20}
+              height={20}
+              customStyle={{ position: 'absolute', right: 0 }}
+            />
+          )}
         </div>
       </div>
       <div className='category'>
@@ -75,11 +139,13 @@ const Filter = () => {
           />
           <div className='category__price-span'>
             <span>
-              {inputRange.length > 0 ? formatPriceCLP(inputRange[0]) : '$1.800'}
+              {filtersActive.price.length > 0
+                ? formatPriceCLP(filtersActive.price[0])
+                : '$1.800'}
             </span>
             <span>
-              {inputRange.length > 0
-                ? formatPriceCLP(inputRange[1])
+              {filtersActive.price.length > 0
+                ? formatPriceCLP(filtersActive.price[1])
                 : '$25.500'}
             </span>
           </div>

@@ -23,19 +23,10 @@ export const productosSlice = createSlice({
         state.isVisibleBtnLoadMore = false
       }
     },
-    filterProductsByCategory: (state, action) => {
-      const category = action.payload
+    filterProducts: (state, action) => {
+      const filtersActive = action.payload
       const productsFiltered = PRODUCTS.filter(
-        product => product.category === category
-      )
-      state.dataProducts = productsFiltered
-      state.isVisibleBtnLoadMore = false
-    },
-    filterProductsByPrice: (state, action) => {
-      const rangePrice = action.payload
-      const productsFiltered = PRODUCTS.filter(
-        product =>
-          (product.price >= rangePrice[0]) & (product.price <= rangePrice[1])
+        product => product.category === filtersActive.category
       )
       state.dataProducts = productsFiltered
       state.isVisibleBtnLoadMore = false
@@ -72,7 +63,8 @@ export const productosSlice = createSlice({
       state.dataProducts = productsOrdened
     },
     resetProducts: state => {
-      state.dataProducts = PRODUCTS
+      state.dataProducts = PRODUCTS.slice(0, 6)
+      state.isVisibleBtnLoadMore = true
       state.isVisibleCesta = false
       state.dataCesta = []
     },
@@ -81,8 +73,7 @@ export const productosSlice = createSlice({
 
 export const {
   loadAllProducts,
-  filterProductsByCategory,
-  filterProductsByPrice,
+  filterProducts,
   showOrHideCesta,
   addProduct,
   removeProduct,

@@ -23,12 +23,9 @@ const ProductsFilter = () => {
   )
 
   const handleChangeSelect = order => dispatch(orderByAscOrDesc(order))
-  const handleClickLoadMore = () => {
-    setOffSet(offSet + offSet)
-  }
+  const handleClickLoadMore = () => setOffSet(offSet + offSet)
 
   useEffect(() => {
-    dispatch(loadAllProducts(offSet))
     return () => {
       dispatch(resetProducts())
       setOffSet(6)

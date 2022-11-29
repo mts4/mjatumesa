@@ -50,6 +50,7 @@ const Wrapper = styled.div`
       }
     }
     &__buttons {
+      position: relative;
       display: flex;
       align-items: center;
       margin-bottom: 10px;
