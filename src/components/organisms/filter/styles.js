@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 // import ArrowDown from '../../../../assets/images/svg/icons/arrow-select.svg'
 import { COLORS } from '../../../theme/css/global.colors'
+import { device } from '../../../theme/css/media.querys'
 // import { device } from '../../../../theme/css/media.querys'
 
 const title = `
@@ -23,11 +24,29 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 250px;
+  @media ${device.ipad} {
+    position: absolute;
+    display: none;
+    z-index: 2;
+    background-color: ${COLORS.white};
+    box-shadow: 0px 0px 5px #d7746666;
+    border: 0.5px solid #262c57;
+    border-radius: 15px;
+    padding: 0px 25px 25px 25px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    top: 97px;
+  }
   .title {
     display: flex;
     align-items: center;
     padding-bottom: 29px;
     border-bottom: 1px solid ${COLORS.lightGrayBorderProduct};
+    @media ${device.ipad} {
+      display: none;
+    }
     h5 {
       ${title};
       font-size: 19px;

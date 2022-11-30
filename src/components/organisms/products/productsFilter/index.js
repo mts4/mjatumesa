@@ -24,6 +24,8 @@ const ProductsFilter = () => {
 
   const handleChangeSelect = order => dispatch(orderByAscOrDesc(order))
   const handleClickLoadMore = () => setOffSet(offSet + offSet)
+  const handleClickShowFilterMobile = () =>
+    console.log('mostrar filter en mobile')
 
   useEffect(() => {
     return () => {
@@ -44,6 +46,13 @@ const ProductsFilter = () => {
           <h5>Nuestra Carta</h5>
         </div>
         <div className='header__right'>
+          <button
+            className='visible-mobile header__right-btn'
+            onClick={handleClickShowFilterMobile}
+          >
+            <Icon name='icon-filter' width={14} height={14} />
+            <p>Filtrar</p>
+          </button>
           <select
             name=''
             id=''

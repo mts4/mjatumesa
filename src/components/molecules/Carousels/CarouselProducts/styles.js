@@ -7,6 +7,10 @@ const BoxCarousel = styled.div`
   .swiper {
     width: 100%;
     height: 100%;
+    @media (max-width: 500px) {
+      border-radius: 11px;
+      margin-bottom: 50px;
+    }
   }
 
   .swiper-slide {
@@ -35,7 +39,6 @@ const BoxCarousel = styled.div`
     padding-left: 3rem;
     text-align: initial;
     background-image: url(${SliderImageDesk});
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,8 +47,7 @@ const BoxCarousel = styled.div`
     @media ${device.ipad} {
       background-image: url(${SliderImageMobile});
       height: auto;
-      padding-bottom: 3rem;
-      padding-right: 3rem;
+      padding: 18px;
     }
 
     &__title {
@@ -53,6 +55,7 @@ const BoxCarousel = styled.div`
       font-weight: 900;
       font-size: 40px;
       margin-bottom: 20px;
+      font-size: 23px;
     }
     &__description {
       color: ${COLORS.violetDark};
@@ -61,10 +64,12 @@ const BoxCarousel = styled.div`
       max-width: 650px;
       @media ${device.ipad} {
         max-width: 100%;
+        font-size: 17px;
       }
     }
     &__btn {
-      color: ${COLORS.violetDark};
+      color: ${COLORS.white};
+      background-color: ${COLORS.violetDark};
       border: none;
       padding: 12px;
       border-radius: 20px;
@@ -73,8 +78,11 @@ const BoxCarousel = styled.div`
       font-weight: 600;
       font-size: 15px;
       cursor: pointer;
+      font-family: 'Raleway';
       @media ${device.ipad} {
-        max-width: 100%;
+        display: block;
+        max-width: 300px;
+        margin: 0 auto;
       }
     }
   }
