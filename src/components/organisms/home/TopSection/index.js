@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom'
+// Molecules
 import Button from '../../../molecules/Button'
+import TitleSection from '../../../molecules/TitleSection'
 // Images
 import EmoteLove from '../../../../assets/images/svg/icons/emote-love.svg'
 import TopSectionImage from '../../../../assets/images/svg/img/top-section-image.svg'
@@ -6,14 +9,16 @@ import TopSectionImage from '../../../../assets/images/svg/img/top-section-image
 import { COLORS } from '../../../../theme/css/global.colors'
 // Styles
 import Wrapper from './styles'
-import { Link } from 'react-router-dom'
+
 const TopSection = () => {
   return (
     <Wrapper>
       <div className='blockLeft'>
-        <h1 className='blockLeft__title'>
-          Come como <span>en casa</span>
-        </h1>
+        <TitleSection
+          textFirst='Come como '
+          textSecond='en casa'
+          lineBreak={true}
+        />
         <p className='blockLeft__description'>
           Platos de primera, cocinados de manera artesanal con productos
           seleccionados,{' '}

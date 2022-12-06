@@ -5,6 +5,7 @@ import {
   loadAllProducts,
   orderByAscOrDesc,
   resetProducts,
+  showOrHideFilterMobile,
 } from '../../../../redux/productosSlice'
 // Products
 import ProductCard from '../productCard'
@@ -24,8 +25,7 @@ const ProductsFilter = () => {
 
   const handleChangeSelect = order => dispatch(orderByAscOrDesc(order))
   const handleClickLoadMore = () => setOffSet(offSet + offSet)
-  const handleClickShowFilterMobile = () =>
-    console.log('mostrar filter en mobile')
+  const handleClickShowFilterMobile = () => dispatch(showOrHideFilterMobile())
 
   useEffect(() => {
     return () => {

@@ -14,7 +14,8 @@ const Wrapper = styled.div`
     flex-direction: column-reverse;
     justify-content: center;
     padding: 20px;
-    margin-top: 10rem;
+    margin-top: 70px;
+    margin-bottom: 50px;
   }
   .blockLeft {
     max-width: 450px;

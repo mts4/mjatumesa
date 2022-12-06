@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import Button from '../../molecules/Button'
+// Toast Notification
+import { ToastContainer } from 'react-toastify'
 // SVG
 import Logo from '../../../assets/images/svg/logos/cheffify.svg'
 import IconPhone from '../../../assets/images/svg/icons/icon-phone-color.svg'
@@ -77,6 +79,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <ToastContainer />
     </FooterBox>
   )
 }

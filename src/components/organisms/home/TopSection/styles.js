@@ -19,27 +19,20 @@ const Wrapper = styled.div`
     padding-left: 193px;
     padding-top: 120px;
 
-    @media (max-width: 991px) {
+    @media ${device.ipad} {
       padding: 11px 25px 11px 25px;
       max-width: 100%;
       width: auto;
-    }
-    &__title {
-      width: 100%;
-      max-width: 280px;
-      color: ${COLORS.violetDark};
-      margin-bottom: 25px;
-      font-size: 42px;
-      font-weight: 800;
-      span {
-        color: ${COLORS.salmon};
-      }
     }
     &__description {
       color: ${COLORS.violetDark};
       font-size: 19px;
       line-height: 35px;
       margin-bottom: 80px;
+      @media ${device.ipad} {
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
       strong {
         font-weight: 600;
       }
@@ -55,6 +48,12 @@ const Wrapper = styled.div`
       }
     }
     &__buttons {
+      a {
+        width: 100%;
+      }
+      button {
+        margin: 0px 3px 0px 3px;
+      }
       @media (max-width: 1280px) {
         display: flex;
         flex-direction: column;

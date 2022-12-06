@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../../../redux/productosSlice'
 import Icon from 'cheffify-react-icons'
+// Hooks
+import { useNotify } from '../../../../hooks/useToastNotification'
 // Utils
 import { formatPriceCLP } from '../../../../utils/formats'
 // Styles
@@ -25,6 +27,7 @@ const ProductCard = product => {
       groupPersons,
     }
     dispatch(addProduct(params))
+    useNotify({ message: 'Producto guardado!', type: 'success' })
   }
 
   return (

@@ -46,5 +46,19 @@ const Wrapper = styled.div`
       margin-left: 8px;
     }
   }
+
+  .notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${COLORS.white};
+    background-color: ${COLORS.salmon};
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    font-size: 9px;
+    margin-left: 5px;
+    padding: 2px;
+  }
 `
 export default Wrapper

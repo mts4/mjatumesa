@@ -42,12 +42,10 @@ const Wrapper = styled.div`
         justify-content: center;
       }
       &-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border: none;
         border-radius: 17px;
         background-color: ${COLORS.lightGrayBorderProduct};
+        cursor: pointer;
         width: 100%;
         max-width: 200px;
         height: 34px;
@@ -56,7 +54,11 @@ const Wrapper = styled.div`
         font-weight: 600;
         color: ${COLORS.violetDark};
         margin-right: 5px;
+        img {
+          display: inline-block;
+        }
         p {
+          display: inline-block;
           margin-left: 10px;
         }
       }
@@ -87,7 +89,6 @@ const Wrapper = styled.div`
   .body {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding-top: 35px;
     @media (max-width: 630px) {
       flex-direction: column;
@@ -95,7 +96,10 @@ const Wrapper = styled.div`
     }
     .cardProduct {
       margin-left: 0px;
-      margin-right: 0px;
+      margin-right: 30px;
+      @media ${device.ipad} {
+        margin-right: 0px;
+      }
     }
   }
   .loadMore {

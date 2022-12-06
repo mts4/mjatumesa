@@ -8,6 +8,7 @@ const initialState = {
   isVisibleBtnLoadMore: true,
   isVisibleCesta: false,
   dataCesta: [],
+  showMobileFilter: false,
 }
 
 export const productosSlice = createSlice({
@@ -35,7 +36,6 @@ export const productosSlice = createSlice({
       state.isVisibleBtnLoadMore = false
     },
     filterProductsByPrice: (state, action) => {
-      console.log(action.payload)
       const rangePrice = action.payload
       const productsFiltered = PRODUCTS.filter(
         product =>
@@ -54,14 +54,14 @@ export const productosSlice = createSlice({
         element => element.title === action.payload.title
       )
       if (findProductByName) {
-        const elementIndex = state.dataCesta.findIndex(
+        const productIndex = state.dataCesta.findIndex(
           obj => obj.title === action.payload.title
         )
         // If product quantity is 0, deleted product and other case edit quantity
         if (action.payload.quantity === 0) {
-          state.dataCesta.splice(elementIndex, 1)
+          state.dataCesta.splice(productIndex, 1)
         } else {
-          state.dataCesta[elementIndex].quantity = action.payload.quantity
+          state.dataCesta[productIndex].quantity = action.payload.quantity
         }
       } else {
         state.dataCesta = [...state.dataCesta, action.payload]
@@ -88,6 +88,15 @@ export const productosSlice = createSlice({
       )
       state.dataCesta = filterProducts
     },
+    showOrHideFilterMobile: state => {
+      state.showMobileFilter = !state.showMobileFilter
+    },
+    updateQuantityCesta: (state, action) => {
+      const { quantity, title, operation } = action.payload
+      const productIndex = state.dataCesta.findIndex(obj => obj.title === title)
+      state.dataCesta[productIndex].quantity =
+        operation === 'sum' ? quantity + 1 : quantity - 1
+    },
   },
 })
 
@@ -101,6 +110,8 @@ export const {
   orderByAscOrDesc,
   resetProducts,
   removeProductByNameInCesta,
+  showOrHideFilterMobile,
+  updateQuantityCesta,
 } = productosSlice.actions
 
 export default productosSlice.reducer

@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 // Redux
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   filterProductsByCategory,
   resetProducts,
   filterProductsByPrice,
+  showOrHideFilterMobile,
 } from '../../../redux/productosSlice'
 // Input Range
 import Slider from 'rc-slider'
@@ -17,11 +18,14 @@ import Wrapper from './styles'
 
 const Filter = () => {
   const dispatch = useDispatch()
+
   const [filtersActive, setFiltersActive] = useState({
     category: '',
     price: [1800, 25500],
     format: [],
   })
+
+  const showMobileFilter = useSelector(state => state.products.showMobileFilter)
 
   const handleClickFilterByCategory = category => {
     if (filtersActive.category !== category) {
@@ -47,12 +51,17 @@ const Filter = () => {
     dispatch(filterProductsByPrice(filtersActive))
   }
 
+  const handleCloseFilterMobile = () => dispatch(showOrHideFilterMobile())
+
   useEffect(() => {
     filtersActive.category && dispatch(filterProductsByCategory(filtersActive))
   }, [filtersActive])
 
   return (
-    <Wrapper>
+    <Wrapper showMobileFilter={showMobileFilter}>
+      <div className='close' onClick={handleCloseFilterMobile}>
+        <Icon name='icon-close' width={20} height={20} />
+      </div>
       <div className='title'>
         <Icon name='icon-filter' width={20} height={20} />
         <h5>Filtrar</h5>

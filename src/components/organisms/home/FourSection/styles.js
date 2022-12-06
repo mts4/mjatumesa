@@ -46,6 +46,10 @@ const Wrapper = styled.div`
         max-width: 257px;
       }
     }
+    a {
+      width: 100%;
+      text-align: center;
+    }
   }
   .blockRight {
     &__image {

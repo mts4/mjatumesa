@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   max-width: 250px;
   @media ${device.ipad} {
     position: absolute;
-    display: none;
+    display: ${props => (props.showMobileFilter ? 'flex' : 'none')};
     z-index: 2;
     background-color: ${COLORS.white};
     box-shadow: 0px 0px 5px #d7746666;
@@ -38,6 +38,14 @@ const Wrapper = styled.div`
     right: 0;
     top: 0;
     top: 97px;
+  }
+  .close {
+    display: none;
+    margin-left: auto;
+    margin-top: 10px;
+    @media ${device.ipad} {
+      display: block;
+    }
   }
   .title {
     display: flex;
@@ -57,6 +65,9 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 35px;
+    @media ${device.ipad} {
+      margin-top: 10px;
+    }
     &__title {
       display: flex;
       align-items: center;

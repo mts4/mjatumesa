@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { COLORS } from '../../../theme/css/global.colors'
-// import { device } from '../../.../../../theme/css/media.querys'
+import { device } from '../../.../../../theme/css/media.querys'
 
 const Wrapper = styled.div`
   position: absolute;
@@ -11,6 +11,12 @@ const Wrapper = styled.div`
   background-color: ${COLORS.white};
   border-radius: 15px;
   padding: 16px;
+  @media ${device.ipad} {
+    width: 80%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .title {
     font-size: 15px;
     text-align: center;

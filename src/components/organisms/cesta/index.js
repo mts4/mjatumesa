@@ -3,9 +3,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import {
   showOrHideCesta,
   removeProductByNameInCesta,
+  updateQuantityCesta,
 } from '../../../redux/productosSlice'
 // Molecules
 import Icon from '../../molecules/Icon'
+// Hooks
+import { useClickOutElement } from '../../../hooks/useClickOutElement'
 // Utils
 import { formatPriceCLP } from '../../../utils/formats'
 import { totalPriceCesta } from '../../../utils/functions'
@@ -14,25 +17,30 @@ import Wrapper from './styles'
 
 const Cesta = () => {
   const dispatch = useDispatch()
-  // Event click outside element
-  document.addEventListener(
-    'mousedown',
-    e =>
-      !document.querySelector('.boxCesta').contains(e.target) &&
-      dispatch(showOrHideCesta())
-  )
   const dataCesta = useSelector(state => state.products.dataCesta)
 
-  const handleClickDelete = name => {
-    dispatch(removeProductByNameInCesta(name))
-  }
-
-  const handleClickDecrement = () => {
-    console.log('decrementar')
-  }
+  const handleClickDelete = name => dispatch(removeProductByNameInCesta(name))
+  const handleClickClose = () => dispatch(showOrHideCesta())
+  const handleClickOutSideElement = () => dispatch(showOrHideCesta())
+  const handleClickDecrement = (quantity, title, operation) =>
+    dispatch(updateQuantityCesta({ title, quantity, operation }))
+  const ref = useClickOutElement(handleClickOutSideElement)
 
   return (
-    <Wrapper className='boxCesta'>
+    <Wrapper className='boxCesta' ref={ref}>
+      <div className='boxClose' onClick={() => handleClickClose()}>
+        <Icon
+          name='icon-close'
+          width={15}
+          height={15}
+          customStyle={{
+            position: 'absolute',
+            right: 15,
+            top: 15,
+            cursor: 'pointer',
+          }}
+        />
+      </div>
       <h5 className='title'>Mi Cesta</h5>
       {dataCesta.length > 0 ? (
         <>
@@ -61,14 +69,31 @@ const Cesta = () => {
                 <div className='item__controls'>
                   <button
                     className='item__controls-btn'
-                    onClick={() => handleClickDecrement(product.quantity)}
+                    onClick={() =>
+                      handleClickDecrement(
+                        product.quantity,
+                        product.title,
+                        'rest'
+                      )
+                    }
                   >
                     -
                   </button>
                   <p className='item__controls-quantityText'>
                     {product.quantity}
                   </p>
-                  <button className='item__controls-btn'>+</button>
+                  <button
+                    className='item__controls-btn'
+                    onClick={() =>
+                      handleClickDecrement(
+                        product.quantity,
+                        product.title,
+                        'sum'
+                      )
+                    }
+                  >
+                    +
+                  </button>
                 </div>
                 <div className='item__price'>
                   {formatPriceCLP(product.price)}
