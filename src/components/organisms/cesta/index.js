@@ -22,8 +22,13 @@ const Cesta = () => {
   const handleClickDelete = name => dispatch(removeProductByNameInCesta(name))
   const handleClickClose = () => dispatch(showOrHideCesta())
   const handleClickOutSideElement = () => dispatch(showOrHideCesta())
-  const handleClickDecrement = (quantity, title, operation) =>
+
+  const handleClickIncrement = (quantity, title, operation) =>
     dispatch(updateQuantityCesta({ title, quantity, operation }))
+  const handleClickDecrement = (quantity, title, operation) => {
+    quantity > 1 &&
+      dispatch(updateQuantityCesta({ title, quantity, operation }))
+  }
   const ref = useClickOutElement(handleClickOutSideElement)
 
   return (
@@ -85,7 +90,7 @@ const Cesta = () => {
                   <button
                     className='item__controls-btn'
                     onClick={() =>
-                      handleClickDecrement(
+                      handleClickIncrement(
                         product.quantity,
                         product.title,
                         'sum'
