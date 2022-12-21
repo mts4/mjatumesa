@@ -16,3 +16,11 @@ export const orderProducts = ({ dataProducts, order, PRODUCTS }) => {
     )
   }
 }
+
+export const totalItemsProducts = products => {
+  const result = products.reduce(
+    (acumulador, actual) => acumulador + actual.quantity,
+    0
+  )
+  return result
+}

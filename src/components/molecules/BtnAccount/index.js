@@ -1,6 +1,8 @@
 import Icon from 'cheffify-react-icons'
 // Redux
 import { useSelector } from 'react-redux'
+// Utils
+import { totalItemsProducts } from '../../../utils/functions'
 // Styles
 import Wrapper from './styles'
 
@@ -14,6 +16,7 @@ const BtnAccount = ({
   onClickCesta,
 }) => {
   const dataCesta = useSelector(state => state.products.dataCesta)
+
   return (
     <Wrapper bgColor={bgColor}>
       <Icon
@@ -32,7 +35,7 @@ const BtnAccount = ({
         onClick={onClickCesta}
       />
       {dataCesta.length > 0 && (
-        <span className='notification'>{dataCesta.length}</span>
+        <span className='notification'>{totalItemsProducts(dataCesta)}</span>
       )}
     </Wrapper>
   )
