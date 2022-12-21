@@ -6,6 +6,7 @@ import Cesta from '../../organisms/cesta'
 import CarouselProductos from '../../molecules/Carousels/CarouselProducts'
 import Filter from '../../organisms/filter'
 import ProductsFilter from '../../organisms/products/productsFilter'
+import Somos from '../../organisms/products/somos'
 import Footer from '../../organisms/footer'
 
 import Wrapper from './styles'
@@ -23,6 +24,7 @@ const ShopTemplate = () => {
           <Filter />
           <ProductsFilter />
         </div>
+        <Somos />
       </Wrapper>
       <Footer />
     </>
