@@ -8,7 +8,7 @@ import Wrapper from './styles'
 
 const FeedBack = () => {
   return (
-    <Wrapper>
+    <Wrapper id='feedback'>
       <div className='container'>
         <TitleSection
           textFirst='Guatita llena, '

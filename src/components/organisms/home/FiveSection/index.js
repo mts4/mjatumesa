@@ -11,7 +11,7 @@ import Wrapper from './styles'
 
 const FiveSection = () => {
   return (
-    <Wrapper>
+    <Wrapper id='somos'>
       <div className='blockLeft'>
         <img src={CoverPeople} className='visible-desktop' />
         <img src={CoverPeopleMobile} className='visible-mobile' />
@@ -40,7 +40,10 @@ const FiveSection = () => {
         </p>
         <img src={ComeHouse} className='blockRight__image' />
 
-        <ButtonCircleDown customStyle={{ marginTop: 60 }} />
+        <ButtonCircleDown
+          customStyle={{ marginTop: 60 }}
+          sectionId='feedback'
+        />
       </div>
       <img src={bgLeft} className='bgLeft' />
       <img src={bgRight} className='bgRight' />

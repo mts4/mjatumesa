@@ -15,8 +15,12 @@ import Wrapper from './styles'
 
 const SecondSection = () => {
   return (
-    <Wrapper>
-      <ArrowScrollDown bgColor={COLORS.roseLight} color={COLORS.salmon} />
+    <Wrapper id='products'>
+      <ArrowScrollDown
+        bgColor={COLORS.roseLight}
+        color={COLORS.salmon}
+        sectionId='products'
+      />
       <TitleSection textFirst='¿Qué ' textSecond='comemos hoy?' />
       <p className='description'>
         Sabemos que cuesta decir quién es mejor, si el papá o la mamá. A

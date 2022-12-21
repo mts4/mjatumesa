@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
 
 const FourSection = () => {
   return (
-    <Wrapper>
+    <Wrapper id='slideCocina'>
       <div className='blockLeft'>
         <TitleSection
           textFirst='Cocina cuando '
@@ -51,6 +51,7 @@ const FourSection = () => {
           right: 0,
           margin: '0 auto',
         }}
+        sectionId='somos'
       />
     </Wrapper>
   )

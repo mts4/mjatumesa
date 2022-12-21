@@ -16,8 +16,12 @@ import { Link } from 'react-router-dom'
 
 const ThirdSection = () => {
   return (
-    <Wrapper>
-      <ArrowScrollDown bgColor={COLORS.white} color={COLORS.salmon} />
+    <Wrapper id='pensamos'>
+      <ArrowScrollDown
+        bgColor={COLORS.white}
+        color={COLORS.salmon}
+        sectionId='pensamos'
+      />
       <TitleSection
         textFirst='Pensamos por ti. '
         textSecond='Resolvemos por ti.'
@@ -40,7 +44,10 @@ const ThirdSection = () => {
           iconLeftSize={27}
         />
       </Link>
-      <ButtonCircleDown customStyle={{ marginTop: 40 }} />
+      <ButtonCircleDown
+        customStyle={{ marginTop: 40 }}
+        sectionId='slideCocina'
+      />
       <img src={bgLeft} className='bgLeft' />
       <img src={bgRight} className='bgRight' />
     </Wrapper>
