@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Button from '../../molecules/Button'
+import BtnScrollUp from '../../molecules/BtnScrollUp'
 // Toast Notification
 import { ToastContainer } from 'react-toastify'
 // SVG
@@ -80,6 +81,7 @@ const Footer = () => {
         </div>
       </div>
       <ToastContainer />
+      <BtnScrollUp />
     </FooterBox>
   )
 }
