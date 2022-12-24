@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   margin-bottom: 100px;
   padding-left: 20px;
   padding-right: 20px;
-  .container {
+  .boxFeedback {
     display: flex;
     flex-direction: column;
     justify-content: center;

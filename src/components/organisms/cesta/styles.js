@@ -129,15 +129,16 @@ const Wrapper = styled.div`
       }
     }
     &__btnShop {
-      cursor: pointer;
+      display: block;
       color: ${COLORS.white};
-      border: none;
       border-radius: 6px;
       background-color: ${COLORS.salmon};
-      font-weight: 500;
-      margin-top: 20px;
+      font-weight: bold;
       padding: 14px;
-      width: 100%;
+      font-family: 'Raleway';
+      font-size: 14px;
+      text-align: center;
+      margin-top: 17px;
     }
     &__legal {
       color: ${COLORS.softGray};

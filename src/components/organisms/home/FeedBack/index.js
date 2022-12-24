@@ -9,7 +9,7 @@ import Wrapper from './styles'
 const FeedBack = () => {
   return (
     <Wrapper id='feedback'>
-      <div className='container'>
+      <div className='boxFeedback'>
         <TitleSection
           textFirst='Guatita llena, '
           textSecond='cliente contento.'

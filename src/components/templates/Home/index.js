@@ -1,5 +1,3 @@
-// Redux
-import { useSelector } from 'react-redux'
 import MetaTags from '../../organisms/metas'
 import Navbar from '../../organisms/menu'
 import Cesta from '../../organisms/cesta'
@@ -13,12 +11,11 @@ import Prensa from '../../organisms/home/Prensa'
 import Footer from '../../organisms/footer'
 
 const HomeTemplate = () => {
-  const isVisibleCesta = useSelector(state => state.products.isVisibleCesta)
   return (
     <>
       <MetaTags title='Cheffify - Home' description='descripcion home' />
       <Navbar />
-      {isVisibleCesta === true && <Cesta />}
+      <Cesta />
       <TopSection />
       <SecondSection />
       <ThirdSection />
