@@ -37,6 +37,7 @@ const Footer = () => {
             borderColor={COLORS.aqua}
             iconLeft={IconPhone}
             iconLeftSize={25}
+            width={270}
           />
         </div>
         <div className='footer__middle'>

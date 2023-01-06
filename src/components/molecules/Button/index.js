@@ -11,6 +11,7 @@ const Button = ({
   iconLeft,
   iconLeftSize,
   margin,
+  borderRadius,
 }) => {
   return (
     <ButtonPrimary
@@ -22,6 +23,7 @@ const Button = ({
       iconLeft={iconLeft}
       iconLeftSize={iconLeftSize}
       margin={margin}
+      borderRadius={borderRadius}
       style={customStyle}
     >
       {iconLeft && <img src={iconLeft} />}

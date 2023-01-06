@@ -8,12 +8,12 @@ const ButtonPrimary = styled.button`
   justify-content: ${props => props.iconLeft && `center`};
   align-items: ${props => props.iconLeft && `center`};
   cursor: pointer;
-  width: 100%;
-  max-width: ${props => (props.width ? `${props.width}px` : '250px')};
+  width: ${props => (props.width ? `${props.width}px` : '100%')};
   @media ${device.ipad} {
     max-width: 300px;
   }
-  border-radius: 32px;
+  border-radius: ${props =>
+    props.borderRadius ? `${props.borderRadius}px` : '32px'};
   padding: 15px 0px 15px 0px;
   font-size: ${props => (props.fontSize ? `${props.fontSize}px` : '18px')};
   margin: ${props => (props.margin ? `${props.margin}px` : '0')};

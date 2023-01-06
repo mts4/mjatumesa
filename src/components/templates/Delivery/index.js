@@ -1,7 +1,11 @@
 import MetaTags from '../../organisms/metas'
 import Navbar from '../../organisms/menu'
 import Cesta from '../../organisms/cesta'
+import AddressForm from '../../organisms/addressForm'
+import ResumeCart from '../../organisms/resumeCart'
 import Footer from '../../organisms/footer'
+// Styles
+import Container from './styles'
 
 const DeliveryTemplate = () => {
   return (
@@ -10,7 +14,10 @@ const DeliveryTemplate = () => {
       <Navbar />
       <Cesta />
       <div className='wrapper'>
-        <p>Contenido</p>
+        <Container>
+          <AddressForm />
+          <ResumeCart />
+        </Container>
       </div>
       <Footer />
     </>
