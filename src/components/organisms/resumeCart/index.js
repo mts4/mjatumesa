@@ -60,7 +60,6 @@ export const RowProduct = ({ title, price, groupPersons, image }) => {
       <img className='products__image' src={image} />
       <div className='products__info'>
         <p className='products__info-name'>{title}</p>
-        <p className='products__info-quantity'>{groupPersons} Personas</p>
       </div>
       <div className='products__price'>
         <p className='products__price-text'> {formatPriceCLP(price)}</p>

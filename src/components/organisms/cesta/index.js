@@ -8,6 +8,7 @@ import {
 } from '../../../redux/productosSlice'
 // Molecules
 import Icon from '../../molecules/Icon'
+import ControlsProduct from '../../molecules/ControlsProduct'
 // Hooks
 import { useClickOutElement } from '../../../hooks/useClickOutElement'
 // Utils
@@ -64,9 +65,6 @@ const Cesta = () => {
                     />
                     <div className='item__info'>
                       <p className='item__info-title'>{product.title}</p>
-                      {/* <p className='item__info-quantity'>
-                        {product.groupPersons} Personas
-                      </p> */}
                     </div>
                   </div>
                   <div className='item__delete'>
@@ -79,35 +77,12 @@ const Cesta = () => {
                       />
                     </button>
                   </div>
-                  <div className='item__controls'>
-                    <button
-                      className='item__controls-btn'
-                      onClick={() =>
-                        handleClickDecrement(
-                          product.quantity,
-                          product.title,
-                          'rest'
-                        )
-                      }
-                    >
-                      -
-                    </button>
-                    <p className='item__controls-quantityText'>
-                      {product.quantity}
-                    </p>
-                    <button
-                      className='item__controls-btn'
-                      onClick={() =>
-                        handleClickIncrement(
-                          product.quantity,
-                          product.title,
-                          'sum'
-                        )
-                      }
-                    >
-                      +
-                    </button>
-                  </div>
+                  <ControlsProduct
+                    handleClickIncrement={handleClickIncrement}
+                    handleClickDecrement={handleClickDecrement}
+                    quantity={product.quantity}
+                    title={product.title}
+                  />
                   <div className='item__price'>
                     {formatPriceCLP(product.price * product.quantity)}
                   </div>

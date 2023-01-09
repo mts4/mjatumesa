@@ -20,6 +20,7 @@ const Wrapper = styled.div`
   .products {
     display: flex;
     margin-bottom: 14px;
+    align-items: center;
     &__image {
       width: 60px;
       border-radius: 10px;
