@@ -15,4 +15,5 @@ export const COLORS = {
   aqua: '#275C73',
   roseLight: '#FCF3F2',
   shadowSalmon: '#d7746666',
+  salmonText: '#DA7466',
 }

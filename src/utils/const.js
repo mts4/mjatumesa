@@ -41,3 +41,5 @@ export const LIST_INFO = [
     icon: <IconFood />,
   },
 ]
+
+export const PRICE_DELIVERY = 3000

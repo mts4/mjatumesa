@@ -1,10 +1,8 @@
 import styled from 'styled-components'
-// Utils
-// import { COLORS } from '../../../theme/css/global.colors'
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 `
 export default Container

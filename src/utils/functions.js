@@ -24,3 +24,10 @@ export const totalItemsProducts = products => {
   )
   return result
 }
+
+export const totalWithDelivery = (cesta, delivery) => {
+  let total = 0
+  cesta.map(product => (total = product.price * product.quantity + total))
+  total = total + delivery
+  return total
+}

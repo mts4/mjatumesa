@@ -12,7 +12,8 @@ import Icon from '../../molecules/Icon'
 import { useClickOutElement } from '../../../hooks/useClickOutElement'
 // Utils
 import { formatPriceCLP } from '../../../utils/formats'
-import { totalPriceCesta } from '../../../utils/functions'
+import { totalPriceCesta, totalWithDelivery } from '../../../utils/functions'
+import { PRICE_DELIVERY } from '../../../utils/const'
 // Styles
 import Wrapper from './styles'
 
@@ -63,9 +64,9 @@ const Cesta = () => {
                     />
                     <div className='item__info'>
                       <p className='item__info-title'>{product.title}</p>
-                      <p className='item__info-quantity'>
+                      {/* <p className='item__info-quantity'>
                         {product.groupPersons} Personas
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                   <div className='item__delete'>
@@ -108,20 +109,28 @@ const Cesta = () => {
                     </button>
                   </div>
                   <div className='item__price'>
-                    {formatPriceCLP(product.price)}
+                    {formatPriceCLP(product.price * product.quantity)}
                   </div>
                 </div>
               ))}
             </div>
             <div className='footer'>
               <div className='footer__delivery'>
+                <p className='footer__delivery-text'>SubTotal</p>
+                <p className='footer__delivery-price'>
+                  {formatPriceCLP(totalPriceCesta(dataCesta))}
+                </p>
+              </div>
+              <div className='footer__delivery'>
                 <p className='footer__delivery-text'>Despacho*</p>
-                <p className='footer__delivery-price'>{formatPriceCLP(3550)}</p>
+                <p className='footer__delivery-price'>
+                  {formatPriceCLP(PRICE_DELIVERY)}
+                </p>
               </div>
               <div className='footer__total'>
                 <p className='footer__total-text'>Total pedido</p>
                 <p className='footer__total-price'>
-                  {formatPriceCLP(totalPriceCesta(dataCesta))}
+                  {formatPriceCLP(totalWithDelivery(dataCesta, PRICE_DELIVERY))}
                 </p>
               </div>
               <Link

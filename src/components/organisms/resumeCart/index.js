@@ -1,5 +1,70 @@
+// Redux
+import { useSelector } from 'react-redux'
+// Utils
+import { formatPriceCLP } from '../../../utils/formats'
+import { totalPriceCesta } from '../../../utils/functions'
+// Styles
+import Wrapper from './styles'
+
 const ResumeCart = () => {
-  return <div>ResumeCart</div>
+  const dataCesta = useSelector(state => state.products.dataCesta)
+  return (
+    <Wrapper>
+      <div className='head'>
+        <h5 className='head__title'>Resumen del pedido</h5>
+        {dataCesta.length > 0 &&
+          dataCesta.map(
+            (product, index) =>
+              product && (
+                <RowProduct
+                  key={index}
+                  title={product.title}
+                  price={product.price}
+                  groupPersons={product.groupPersons}
+                  image={product.image}
+                />
+              )
+          )}
+      </div>
+      <div className='subtotal'>
+        <div className='subtotal__box' style={{ marginBottom: 10 }}>
+          <p className='subtotal__box-title'>Subtotal</p>
+          <p className='subtotal__box-text'>
+            {formatPriceCLP(totalPriceCesta(dataCesta))}
+          </p>
+        </div>
+        <div className='subtotal__box'>
+          <p className='subtotal__box-txt'>Despacho*</p>
+          <p className='subtotal__box-txt'>$3.000</p>
+        </div>
+        <div className='subtotal__box'>
+          <p className='subtotal__box-txt'>IVA</p>
+          <p className='subtotal__box-txt'>$1.000</p>
+        </div>
+      </div>
+      <div className='total'>
+        <p className='total__text'>Total pedido</p>
+        <p className='total__total'>
+          {formatPriceCLP(totalPriceCesta(dataCesta))}
+        </p>
+      </div>
+    </Wrapper>
+  )
 }
 
 export default ResumeCart
+
+export const RowProduct = ({ title, price, groupPersons, image }) => {
+  return (
+    <div className='products'>
+      <img className='products__image' src={image} />
+      <div className='products__info'>
+        <p className='products__info-name'>{title}</p>
+        <p className='products__info-quantity'>{groupPersons} Personas</p>
+      </div>
+      <div className='products__price'>
+        <p className='products__price-text'> {formatPriceCLP(price)}</p>
+      </div>
+    </div>
+  )
+}
