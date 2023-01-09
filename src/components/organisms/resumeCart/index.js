@@ -1,8 +1,10 @@
 // Redux
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { updateQuantityCesta } from '../../../redux/productosSlice'
 // Utils
 import { formatPriceCLP } from '../../../utils/formats'
 import { totalPriceCesta } from '../../../utils/functions'
+import ControlsProduct from '../../molecules/ControlsProduct'
 // Styles
 import Wrapper from './styles'
 
@@ -20,7 +22,7 @@ const ResumeCart = () => {
                   key={index}
                   title={product.title}
                   price={product.price}
-                  groupPersons={product.groupPersons}
+                  quantity={product.quantity}
                   image={product.image}
                 />
               )
@@ -54,12 +56,25 @@ const ResumeCart = () => {
 
 export default ResumeCart
 
-export const RowProduct = ({ title, price, groupPersons, image }) => {
+export const RowProduct = ({ title, price, quantity, image }) => {
+  const dispatch = useDispatch()
+  const handleClickIncrement = (quantity, title, operation) =>
+    dispatch(updateQuantityCesta({ title, quantity, operation }))
+  const handleClickDecrement = (quantity, title, operation) => {
+    quantity > 1 &&
+      dispatch(updateQuantityCesta({ title, quantity, operation }))
+  }
   return (
     <div className='products'>
       <img className='products__image' src={image} />
       <div className='products__info'>
         <p className='products__info-name'>{title}</p>
+        <ControlsProduct
+          handleClickIncrement={handleClickIncrement}
+          handleClickDecrement={handleClickDecrement}
+          quantity={quantity}
+          title={title}
+        />
       </div>
       <div className='products__price'>
         <p className='products__price-text'> {formatPriceCLP(price)}</p>

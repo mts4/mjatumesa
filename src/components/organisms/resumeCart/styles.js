@@ -28,7 +28,6 @@ const Wrapper = styled.div`
     }
     &__info {
       display: flex;
-      flex-direction: column;
       margin-right: 120px;
       &-name {
         font-size: 13px;
