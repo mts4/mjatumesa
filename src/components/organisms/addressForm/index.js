@@ -2,6 +2,7 @@
 import InputForm from '../../molecules/InputForm'
 import Button from '../../molecules/Button'
 // Utils
+import IconDiscount from '../../../assets/images/svg/icons/icon-discount.svg'
 import { COLORS } from '../../../theme/css/global.colors'
 // Styles
 import Form from './styles'
@@ -60,8 +61,19 @@ const AddressForm = () => {
           marginLeft={3}
         />
       </div>
+      <InputForm
+        type='text'
+        name='nameAddress'
+        id='nameAddress'
+        placeholder='Código de descuento'
+        marginLeft={3}
+        iconLeft={IconDiscount}
+        placeHolderAlign='center'
+        fontWeight='normal'
+        fontStyle='italic'
+      />
       <Button
-        text='Continuar'
+        text='Finalizar compra'
         fontSize={17}
         color={COLORS.white}
         bgColor={COLORS.salmon}
