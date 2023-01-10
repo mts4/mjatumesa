@@ -18,6 +18,12 @@ import Menu from './styles'
 
 const Navbar = () => {
   const dispatch = useDispatch()
+
+  const handleClickScroll = sectionId => {
+    const element = document.getElementById(sectionId)
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <Menu>
       <div className='menu'>
@@ -34,7 +40,11 @@ const Navbar = () => {
 
         <div className='menu__links'>
           {URL_NAV.map((item, index) => (
-            <span className='menu__links-contain' key={index}>
+            <span
+              className='menu__links-contain'
+              key={index}
+              onClick={() => handleClickScroll(item.menuAncla)}
+            >
               <Icon
                 name={item.icon.name}
                 size={item.icon.size}

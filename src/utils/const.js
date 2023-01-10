@@ -8,6 +8,7 @@ export const URL_NAV = [
   {
     name: 'Servicios',
     url: '',
+    menuAncla: 'pensamos',
     icon: {
       name: 'star',
       size: 11,
@@ -16,6 +17,7 @@ export const URL_NAV = [
   {
     name: 'Somos lo que comemos',
     url: '',
+    menuAncla: 'somos',
     icon: {
       name: 'hearth',
       size: 10,
